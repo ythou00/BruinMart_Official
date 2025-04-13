@@ -51,9 +51,10 @@ button {
 
 .message-thread {
   display: flex;
-  align-items: center;
-  border-bottom: 1px solid #ccc;
-  padding: 1rem 0;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
 }
 
 .profile-img {
@@ -67,4 +68,9 @@ button {
 .message-info h3 {
   margin: 0;
   font-size: 1.25rem;
+}
+
+.location {
+  font-size: 0.85rem;
+  color: #888;
 }

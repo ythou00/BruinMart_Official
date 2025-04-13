@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import MessageThread from './MessageThread';
+import FullChatView from './FullChatView'; // make sure this file exists!
 
 const dummyMessages = [
   {
@@ -23,22 +24,28 @@ const dummyMessages = [
     location: "Westwood, Los Angeles",
     lastMessage: "Sounds good, let's meet at 4pm.",
   },
-  // Add more...
 ];
 
 const MessageCenter = () => {
+  const [selectedThread, setSelectedThread] = useState(null);
+
   return (
     <div style={{ maxWidth: "800px", margin: "2rem auto" }}>
       <h1 style={{ textAlign: 'center' }}>Message Center</h1>
-      {dummyMessages.map(thread => (
-        <MessageThread
-          key={thread.id}
-          name={thread.name}
-          profileImage={thread.profileImage}
-          location={thread.location}
-          lastMessage={thread.lastMessage}
+      {!selectedThread ? (
+        dummyMessages.map(thread => (
+          <MessageThread
+            key={thread.id}
+            {...thread}
+            onClick={() => setSelectedThread(thread)}
+          />
+        ))
+      ) : (
+        <FullChatView
+          thread={selectedThread}
+          onBack={() => setSelectedThread(null)}
         />
-      ))}
+      )}
     </div>
   );
 };
