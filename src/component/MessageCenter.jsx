@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import MessageThread from './MessageThread';
 import FullChatView from './FullChatView'; // make sure this file exists!
+import './MessageCenter.css'
 
 const dummyMessages = [
   {
