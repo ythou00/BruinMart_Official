@@ -1,36 +1,39 @@
-body {
-  background-color: white;
-  color: black;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;  /* Optional for better appearance */
+/* #root {
+  max-width: 1280px;
+  margin: none;
+  padding: 2rem;
+  text-align: left;
+} */
+/* input {
+  margin-right: 0.5rem;
+  padding: 0.25rem;
+}
+button {
+  padding: 0.25rem 0.5rem;
 }
 
-.app-container {
-  background-color: white;
-  color: black;
-  padding: 20px;
-}
-
-.image-box-container {
+.message-thread {
   display: flex;
-  gap: 20px;
-  margin-top: 20px;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
 }
 
-.image-box {
-  width: 150px;
-  height: 150px;
-  border: 2px solid #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background-color: #f5f5f5;
-}
-
-.image-box img {
-  max-width: 100%;
-  max-height: 100%;
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
   object-fit: cover;
+  margin-right: 1rem;
 }
+
+.message-info h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.location {
+  font-size: 0.85rem;
+  color: #888;
+} */
