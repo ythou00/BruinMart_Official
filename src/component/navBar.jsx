@@ -10,7 +10,7 @@ export default function NavBar() {
         <div className="center">
             <ul>
                 <li><Link to="/home">Home</Link></li>
-                <li className="active"><Link to="/page1">Page 1</Link></li>
+                <li className="active"><Link to="/SearchPage">Search Page</Link></li>
                 <li><Link to="/MessageCenter">Message Center</Link></li>
                 <li><Link to="/saveList">Save List</Link></li>
             </ul>
