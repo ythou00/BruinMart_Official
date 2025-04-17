@@ -6,6 +6,8 @@ import Page2 from './component/page2.jsx'
 import Home from './component/home.jsx'
 import SaveList from './component/saveList.jsx'
 import { Route, Routes } from "react-router-dom"
+import React from 'react';
+import MessageCenter from './component/MessageCenter';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,6 +26,8 @@ function App() {
         </Routes>
       </div>
       
+      {/* Your new Message Center component */}
+<MessageCenter />
     </>
   )
 }
