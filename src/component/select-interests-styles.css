@@ -1,0 +1,36 @@
+.interest {
+    position: relative;
+    bottom: 30px;
+    gap: 0px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.caption {
+    position: relative;
+    bottom: 30px;
+    gap: 0px;
+}
+
+.next{
+    background-color: #0047AB;
+    color: white;
+    position: relative;
+    width: 150px;
+    bottom: 250px;
+    left: 550px;
+    cursor: pointer;
+}
+
+.container {
+    display: grid;
+    position: relative;
+    top: 10px;
+    grid-template-columns: auto auto auto auto;
+    gap: 25px 25px;
+}
+
+.looking-for {
+    background-color: #0047AB;
+    color: white;
+}
