@@ -1,4 +1,4 @@
-import './creat-user-styles.css'
+import './component/create-user-styles.css'
 
 function create_user() {
   const handleSubmit = (event) => {};

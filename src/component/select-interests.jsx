@@ -1,4 +1,4 @@
-import './select-interests-styles.css'
+import './component/select-interests-styles.css'
 import {useState} from 'react'
 
 function select_interests() {

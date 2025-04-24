@@ -1,4 +1,4 @@
-import './verify-user-styles.css'
+import './component/verify-user-styles.css'
 
 function verify_user() {
     return (

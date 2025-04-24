@@ -1,4 +1,4 @@
-import './finish-user-styles.css'
+import './component/finish-user-styles.css'
 import {useState} from 'react'
 
 function MovieCard() {
