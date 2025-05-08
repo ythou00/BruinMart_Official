@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "title": "Modern Wood Coffee Table",
+      "category": "Living Room",
+      "price": 120,
+      "link": "https://www.amazon.com/Coffee-Farmhouse-Century-Cocktail-Transparent/dp/B0CPPF9VV2",
+      "imageLink": "./asssets/coffeeTable.jpg",
+      "description": "A minimalist coffee table made from walnut wood."
+    },
+    {
+      "id": 2,
+      "title": "Scandinavian Dining Chair",
+      "category": "Dining Room",
+      "price": 60,
+      "link": "https://www.daals.com/products/greenwich-light-taupe-boucle-dining-chair",
+      "imageLink": "./asssets/diningChair.jpg",
+      "description": "Comfortable chair with a sleek, modern design."
+    },
+    {
+      "id": 3,
+      "title": "Vintage Leather Sofa",
+      "category": "Living Room",
+      "price": 450,
+      "link": "https://expandfurniture.com/products/soft-cube-modern-modular-sofa-set",
+      "imageLink": "./asssets/couch.jpg",
+      "description": "A vintage-style sofa with brown leather upholstery."
+    },
+    {
+        "id": 4,
+        "title": "Vintage Leather Sofa",
+        "category": "Living Room",
+        "price": 450,
+        "link": "https://expandfurniture.com/products/soft-cube-modern-modular-sofa-set",
+        "imageLink": "./asssets/couch.jpg",
+        "description": "A vintage-style sofa with brown leather upholstery."
+    },
+    {
+        "id": 5,
+        "title": "Vintage Leather Sofa",
+        "category": "Living Room",
+        "price": 450,
+        "link": "https://expandfurniture.com/products/soft-cube-modern-modular-sofa-set",
+        "imageLink": "./asssets/couch.jpg",
+        "description": "A vintage-style sofa with brown leather upholstery."
+    },
+    {
+        "id": 6,
+        "title": "Vintage Leather Sofa",
+        "category": "Living Room",
+        "price": 450,
+        "link": "https://expandfurniture.com/products/soft-cube-modern-modular-sofa-set",
+        "imageLink": "./asssets/couch.jpg",
+        "description": "A vintage-style sofa with brown leather upholstery."
+    },
+    {
+        "id": 7,
+        "title": "Vintage Leather Sofa",
+        "category": "Living Room",
+        "price": 450,
+        "link": "https://expandfurniture.com/products/soft-cube-modern-modular-sofa-set",
+        "imageLink": "./asssets/couch.jpg",
+        "description": "A vintage-style sofa with brown leather upholstery."
+    },
+    {
+        "id": 8,
+        "title": "Vintage Leather Sofa",
+        "category": "Living Room",
+        "price": 450,
+        "link": "https://expandfurniture.com/products/soft-cube-modern-modular-sofa-set",
+        "imageLink": "./asssets/couch.jpg",
+        "description": "A vintage-style sofa with brown leather upholstery."
+    }
+  ]
+  
