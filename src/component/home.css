@@ -7,6 +7,7 @@
   .our-statement h1 {
     font-size: 2rem;
     font-weight: bold;
+    margin-top: 2rem;
     margin-bottom: 1rem;
   }
   
@@ -19,6 +20,7 @@
   }
   
   .popular-collection {
+    margin-top: 0.2rem;
     padding: 2rem 0;
     text-align: center;
   }
@@ -39,9 +41,10 @@
 
   .about-section {
     position: relative;
-    margin: 4rem 0;
+    /* margin: 4rem 0; */
     display: flex;
     justify-content: center;
+    margin: 4rem 0 7rem 0; /* top 4rem, bottom 6rem */
   }
   
   .about-card {
@@ -149,11 +152,11 @@
   
   .block2 {
     background-color: #f4a72c;
-    width: 70%;             /* ✅ keep original width */
+    width: 70%;             /* keep original width */
     height: 30px;
     bottom: -35px;
     border-radius: 7px;
-    left: calc(-18%);       /* ✅ align left edge with .block1's */
+    left: calc(-18%);       /* align left edge with .block1's */
     z-index: 1;
   }
 

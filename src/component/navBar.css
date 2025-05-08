@@ -7,13 +7,14 @@ body {
 }
 
 .nav{
-    background-color: #333; 
+    background-color: #000000; 
     color: white;   /* text color */
     display: flex;    /* space anything how we want */
     /* justify-content: space-between;   push everything left & right */
     align-items: stretch;   /* put text in the center (up down space) */
     gap: 2rem;             /* put space in between left and right text*/
-    padding: 0 1rem;       /* put space between the end line from left and right */
+    padding: 1rem 1rem;       /* put space between the end line from left and right */
+    height: 80px;        /* or use this if you prefer fixed height */
 }
 
 .left {
@@ -23,7 +24,7 @@ body {
 }
 
 .center {
-    flex: 1.6;
+    flex: 1.8;
     display: flex;
     justify-content: left;
 }
@@ -32,6 +33,11 @@ body {
     font-size: 2.5rem;
     font-weight: bold;
 }
+
+.nav-link {
+    font-size: 17px;
+}
+  
 
 .nav ul {
    padding: 0;
@@ -47,15 +53,23 @@ body {
     height: 100%;
     display: flex;
     align-items: center;
-    padding: .25rem;
+    padding: .5rem;
 }
 
 .nav li.active {
-    background-color: #555;
+    background-color: transparent;
 
 }
 
 .nav li:hover {
-    background-color: #777;
+    background-color: transparent;
     
 }
+
+.nav a:hover,
+.nav a:focus {
+    background-color: transparent;
+    color: inherit;
+    outline: none;
+}
+

@@ -78,9 +78,9 @@ export default function Home() {
         </div>
       </section>
 
-      <sectino className='footer'>
+      <section className='footer'>
         <Footer />
-      </sectino>      
+      </section>      
 
 
     </div>
