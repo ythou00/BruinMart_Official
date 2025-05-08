@@ -18,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/page1" element={<Page1 />} />
+          <Route path="/page1" element={<SearchPage />} />
           <Route path="/MessageCenter" element={<MessageCenter />} />
           <Route path="/saveList" element={<SaveList />} />
         </Routes>
@@ -26,7 +26,7 @@ function App() {
       
       {/* Your new Message Center component */}
       {/* <MessageCenter /> */}
-      <SearchPage/>
+      {/* <SearchPage/> */}
     </>
   );
 }
