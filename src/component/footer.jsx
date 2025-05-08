@@ -1,12 +1,13 @@
 import React from 'react';
 import './footer.css'; // create this next
+import logoImage from '../assets/react.svg'
 
 export default function Footer() {
   return (
     <section className="end-hero-section">
       <div className="footer-container">
         <div className="footer-left">
-          <img src="/favicon.ico" alt="BruinMart logo" className="footer-logo" />
+          <img src={logoImage} alt="BruinMart logo" className="footer-logo" />
           <h3>BruinMart</h3>
         </div>
         <div className="footer-right">
