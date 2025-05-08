@@ -17,40 +17,22 @@ export default function searchPage(){
       return (
         <div style={{ backgroundColor: 'white', minHeight: '100vh', color: 'black' }}>
           
-          {/* Nav Bar */}
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              padding: '20px 40px',
-              backgroundColor: '#f5f5f5',
-              borderBottom: '1px solid #ccc',
-              position: 'sticky',
-              top: 0,
-              zIndex: 1000,
-              width: '120%'
-              
-            }}
-          >
-            <h2 style={{ margin: 0 }}>Bruin Mart</h2>
-            <div style={{ display: 'flex', gap: '30px' }}>
-              <a href="#" style={{ textDecoration: 'none', color: 'black' }}>Home</a>
-              <a href="#" style={{ textDecoration: 'none', color: 'black' }}>Collection</a>
-              <a href="#" style={{ textDecoration: 'none', color: 'black' }}>Saved List</a>
-              <a href="#" style={{ textDecoration: 'none', color: 'black' }}>Contact</a>
-            </div>
-          </div>
+           {/* Nav Bar */}
+        <div
+        
+       
+        //   </div>
     
-          {/* Main Content */}
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              padding: '50px 20px',
-            }}
-          >
+        //   {/* Main Content */}
+        //   <div
+        //     style={{
+        //       display: 'flex',
+        //       flexDirection: 'column',
+        //       alignItems: 'center',
+        //       padding: '50px 20px',
+        //     }}
+        //   >
+        >
             <h1 style={{ marginBottom: '100px', textAlign: 'center', marginLeft: '340px' }}>Popular Collection</h1>
     
             {/* Dropdown Filters */}
@@ -113,5 +95,8 @@ export default function searchPage(){
             </div>
           </div>
         </div>
-      );
+     
+    );
+
+      
     }
