@@ -1,7 +1,10 @@
-import './component/create-user-styles.css'
+import { useNavigate } from 'react-router-dom'
+import './CreateUserStyles.css'
 
-function create_user() {
+function CreateUser() {
   const handleSubmit = (event) => {};
+
+  const navigate = useNavigate();
 
     return (
       <form onSubmit={{handleSubmit}}>
@@ -16,7 +19,7 @@ function create_user() {
           <input type = "text"/>
         </div>
 
-        <div class = "select-text-flex">
+        <div className = "select-text-flex">
           <div>Class of</div>
           <div>Gender</div>
         </div>
@@ -41,28 +44,33 @@ function create_user() {
           </select>
         </div>
 
-        <div class = "text-flex">
-          <div class = "text-input-flex">
+        <div className = "text-flex">
+          <div className = "text-input-flex">
             <div>Major</div>
             <input type = "text"/>
           </div>
 
-          <div class = "text-input-flex">
+          <div className = "text-input-flex">
             <div>Create Username</div>
             <input type = "text"/>
           </div>
 
-          <div class = "text-input-flex">
+          <div className = "text-input-flex">
             <div>Create Password</div>
-            <input type = "text"/>
+            <input type = "password"/>
           </div>
         </div>
 
-        <button type = "button" className = "button next-button">Next    &gt;</button>
         <button type = "button" className = "button upload-button">Upload</button>
+
+        <button type = "button"
+          className = "button next-button"
+          onClick = {() => navigate("/SelectInterests")}>
+            Next    &gt;
+        </button>
+        
       </form>
     );
    }
    
-   export default MovieCard;
-   
+   export default CreateUser;

@@ -1,7 +1,10 @@
-import './component/select-interests-styles.css'
+import { useNavigate } from 'react-router-dom'
+import './SelectInterestsStyles.css'
 import {useState} from 'react'
 
-function select_interests() {
+function SelectInterests() {
+  const navigate = useNavigate();
+
   const [isClicked, setIsClicked] = useState(false);
   const [isClicked1, setIsClicked1] = useState(false);
   const [isClicked2, setIsClicked2] = useState(false);
@@ -52,13 +55,17 @@ function select_interests() {
     setIsClicked11(!isClicked11); 
   }
 
-  const handleSubmit = (event) => {};
-
   return (
-    <form onSubmit = {{handleSubmit}}>
+    <>
       <div className = "interest">Interest</div>
       <div className = "caption">Select at least three interests</div>
-      <button type = "button" className = "next">Next    &gt;</button>
+
+
+      <button type = "button"
+        className = "next"
+        onClick = {() => navigate("/FinishUser")}>
+          Next    &gt;
+      </button>
 
       <div class = "container">
         <button onClick = {markIsClicked} className = {isClicked ? "looking-for" : ""}>Kitchen Supplies</button>
@@ -74,9 +81,8 @@ function select_interests() {
         <button onClick = {markIsClicked10} className = {isClicked10 ? "looking-for" : ""}>Couch</button>
         <button onClick = {markIsClicked11} className = {isClicked11 ? "looking-for" : ""}>Clothes Organizer</button>
       </div>
-    </form>
+    </>
   );
 }
    
-   export default select_interests;
-   
+   export default SelectInterests;

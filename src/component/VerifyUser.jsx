@@ -1,6 +1,6 @@
-import './component/verify-user-styles.css'
+import './VerifyUser.css'
 
-function verify_user() {
+function VerifyUser() {
     return (
       <div>
         <p className="h1">Welcome</p>
@@ -13,4 +13,4 @@ function verify_user() {
     );
    }
    
-   export default MovieCard;
+   export default VerifyUser;
