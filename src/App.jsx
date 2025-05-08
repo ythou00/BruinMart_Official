@@ -3,11 +3,11 @@ import { Route, Routes } from "react-router-dom"
 import React from 'react';
 import './App.css'
 import NavBar from './component/navBar.jsx'
-import Page1 from './component/page1.jsx'
 import MessageCenter from './component/MessageCenter'
 import Home from './component/home.jsx'
 import SaveList from './component/saveList.jsx'
 import SearchPage from './component/searchpage'
+
 
 function App() {
   return (
@@ -17,13 +17,14 @@ function App() {
         {/* <h1>Web Dev Simplified!!!!!!</h1>  */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/page1" element={<SearchPage />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/SearchPage" element={<SearchPage />} />
           <Route path="/MessageCenter" element={<MessageCenter />} />
-          <Route path="/saveList" element={<SaveList />} />
+          <Route path="/SaveList" element={<SaveList />} />
         </Routes>
       </div>
       
+      {/* <HeroSection /> */}
       {/* Your new Message Center component */}
       {/* <MessageCenter /> */}
       {/* <SearchPage/> */}
