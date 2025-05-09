@@ -4,11 +4,16 @@ import SearchBar from "./searchBar"
 import SearchData from './data.json'
 import { VscAccount } from "react-icons/vsc";
 import { Link, useMatch, useResolvedPath } from 'react-router-dom'
+import logoImage from '../assets/logo-bm.png'
+
 
 export default function NavBar() {
     return <nav className="nav">
         <div className="left">
-            <Link to="/" className="site-title">BruinMart</Link>
+            <Link to="/" className="site-title">
+                <img src={logoImage} alt="logo" className="logo-bm" />
+                BruinMart
+            </Link>
         </div>
         <div className="center">
             <ul>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './footer.css'; // create this next
 import { Link } from 'react-router-dom';
-import logoImage from '../assets/react.svg'
+import logoImage from '../assets/logo-bm.png'
 
 export default function Footer() {
   return (
