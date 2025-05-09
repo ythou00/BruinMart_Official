@@ -9,6 +9,8 @@
   .search-title {
     text-align: center;
     margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
   }
   
   .filters {
@@ -16,6 +18,17 @@
     gap: 2rem;
     justify-content: center;
     margin-bottom: 2rem;
+  }
+
+  .filters label {
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+  }
+
+  .filters select {
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
   }
   
   .card-grid {

@@ -1,6 +1,7 @@
 import React from 'react';
 import './searchpage.css';
 import ItemCard from './itemCard';
+import Footer from './footer'
 
 export default function SearchPage() {
   const items = [
@@ -17,7 +18,7 @@ export default function SearchPage() {
 
   return (
     <div className="search-container">
-      <h1 className="search-title">Popular Collection</h1>
+      <h1 className="search-title">Find What You Need</h1>
 
       <div className="filters">
         <div>
