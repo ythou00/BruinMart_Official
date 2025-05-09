@@ -6,7 +6,9 @@ import deskClockImage from '../assets/deskclock.jpg';
 import deskshelfImage from '../assets/deskshelf.jpg';
 import studyDeskImage from '../assets/studydesk.jpg';
 import teenTitansImage from '../assets/teen_titans.jpg';
+import logoImage from '../assets/logo.png';
 import Footer from './footer';
+import SellGuidePage from './sellGuide'
 
 
 export default function Home() {
@@ -32,7 +34,7 @@ export default function Home() {
             title="Desk Clock"
             detail="good for daily use"
             buttonText="Learn More"
-            link="cardPage"
+            link="/Sell-Guide"
           />
 
           <ItemCard 
@@ -41,7 +43,7 @@ export default function Home() {
             title="Desk Shelf"
             detail="good for daily use"
             buttonText="Learn More"
-            link="cardPage"
+            link="/Sell-Guide"
           />
 
           <ItemCard 
@@ -50,8 +52,18 @@ export default function Home() {
             title="Study Desk"
             detail="good for daily use"
             buttonText="Learn More"
-            link="cardPage"
+            link="/Sell-Guide"
           />
+
+          <ItemCard
+            imgSrc={logoImage}
+            imgAlt="How to sell"
+            title="Ready to Sell?"
+            detail="Wondering how to sell your furniture? Learn in a few easy steps."
+            buttonText="Learn to Sell"
+            link="/Sell-Guide"
+          />
+
         </div>
         
       </section>
@@ -78,9 +90,9 @@ export default function Home() {
         </div>
       </section>
 
-      <sectino className='footer'>
+      <section className='footer'>
         <Footer />
-      </sectino>      
+      </section>      
 
 
     </div>
