@@ -8,6 +8,7 @@ import Home from './component/home.jsx'
 import SaveList from './component/saveList.jsx'
 import SearchPage from './component/searchPage'
 import SellGuide from './component/sellGuide.jsx'
+import LoginPage from './component/page1.jsx'
 
 
 function App() {
@@ -18,11 +19,12 @@ function App() {
         {/* <h1>Web Dev Simplified!!!!!!</h1>  */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Home" element={<Home />} />
-          <Route path="/Marketplace" element={<SearchPage />} />
-          <Route path="/Inbox" element={<MessageCenter />} />
-          <Route path="/SaveList" element={<SaveList />} />
-          <Route path="/Sell-Guide" element={<SellGuide />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/marketplace" element={<SearchPage />} />
+          <Route path="/inbox" element={<MessageCenter />} />
+          <Route path="/save-list" element={<SaveList />} />
+          <Route path="/sell-guide" element={<SellGuide />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </div>
       

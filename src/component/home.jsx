@@ -34,7 +34,7 @@ export default function Home() {
             title="Desk Clock"
             detail="good for daily use"
             buttonText="Learn More"
-            link="/Sell-Guide"
+            link="/sell-guide"
           />
 
           <ItemCard 
@@ -43,7 +43,7 @@ export default function Home() {
             title="Desk Shelf"
             detail="good for daily use"
             buttonText="Learn More"
-            link="/Sell-Guide"
+            link="/sell-guide"
           />
 
           <ItemCard 
@@ -52,7 +52,7 @@ export default function Home() {
             title="Study Desk"
             detail="good for daily use"
             buttonText="Learn More"
-            link="/Sell-Guide"
+            link="/sell-guide"
           />
 
           <ItemCard
@@ -61,7 +61,7 @@ export default function Home() {
             title="Ready to Sell?"
             detail="Wondering how to sell your furniture? Learn in a few easy steps."
             buttonText="Learn to Sell"
-            link="/Sell-Guide"
+            link="/sell-guide"
           />
 
         </div>

@@ -58,7 +58,7 @@ export default function SearchPage() {
               title={item.label}
               detail={item.price}
               buttonText="Learn More"
-              link="/Sell-Guide"
+              link="/sell-guide"
             />
           ))}
         </div>
