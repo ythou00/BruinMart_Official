@@ -15,7 +15,7 @@ export default function NavBar() {
                 <li><Link to="/home" className="nav-link">Home</Link></li>
                 <li className="active"><Link to="/marketplace" className="nav-link">Marketplace</Link></li>
                 <li><Link to="/inbox" className="nav-link">Inbox</Link></li>
-                <li><Link to="/save-list" className="nav-link">Save List</Link></li>
+                <li><Link to="/sell-guide" className="nav-link">Save List</Link></li>
             </ul>
         </div>
         <div className="right">
