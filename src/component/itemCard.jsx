@@ -1,5 +1,6 @@
 import React from 'react';
 import './itemCard.css'
+import { Link } from 'react-router-dom';
 
 export default function ItemCard({ imgSrc, imgAlt, title, detail, buttonText, link }) {
     return (
@@ -7,7 +8,7 @@ export default function ItemCard({ imgSrc, imgAlt, title, detail, buttonText, li
         {imgSrc && imgAlt && (<img className="card-image" src={imgSrc} alt={imgAlt} />)}
         {title && <h1 className="card-title">{title}</h1>}
         {detail && <p className="card-detail">{detail}</p>}
-        {link && buttonText && (<a href={link} className="card-btn">{buttonText}</a>)}
+        {link && buttonText && (<Link to={link} className="card-btn">{buttonText}</Link>)}
       </div>
     );
   }
