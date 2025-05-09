@@ -93,6 +93,8 @@ body {
 
 .login-icon {
   font-size: 1.4rem;
+  color: #f4a72c;
+  margin-top: 0.3rem;
 }
 
 .login-text {
