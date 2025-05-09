@@ -27,11 +27,23 @@ export default function About() {
                     happens with confidence.
                     </p>
                 </div>
-                <img
-                    src={moveInImage}
-                    alt="UCLA Students collaborating"
-                    className="purpose-image"
-                />
+                <div className="image-wrapper">
+                    <img
+                        src={moveInImage}
+                        alt="UCLA Students collaborating"
+                        className="purpose-image"
+                    />
+                    <div className="image-credit-about">
+                        Image Credit:{' '}
+                        <a
+                        href="https://newsroom.ucla.edu/releases/welcome-to-the-new-year-bruins"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >
+                        UCLA Newsroom
+                        </a>
+                    </div>
+                </div>
             </div>
             <h1 className="team-title">Our Team</h1>
             <MemberCard

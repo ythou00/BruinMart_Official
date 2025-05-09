@@ -15,7 +15,7 @@ export default function HeroSection() {
         <Link to="/SearchPage" className="shop-button">Shop Now ⟶</Link>
       </div>
       <div className="image-credit">
-        Source:{' '}
+        Image Credit:{' '}
         <a
             href="https://newsroom.ucla.edu/stories/new-apartments-for-students-fall-2022"
             target="_blank"
