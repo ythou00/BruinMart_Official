@@ -57,7 +57,7 @@ export default function SearchPage() {
             title={item.label}
             detail={item.price}
             buttonText="Learn More"
-            link="/cardPage"
+            link="/Sell-Guide"
           />
         ))}
       </div>

@@ -8,6 +8,7 @@ import studyDeskImage from '../assets/studydesk.jpg';
 import teenTitansImage from '../assets/teen_titans.jpg';
 import logoImage from '../assets/logo.png';
 import Footer from './footer';
+import SellGuidePage from './sellGuide'
 
 
 export default function Home() {
@@ -33,7 +34,7 @@ export default function Home() {
             title="Desk Clock"
             detail="good for daily use"
             buttonText="Learn More"
-            link="cardPage"
+            link="/Sell-Guide"
           />
 
           <ItemCard 
@@ -42,7 +43,7 @@ export default function Home() {
             title="Desk Shelf"
             detail="good for daily use"
             buttonText="Learn More"
-            link="cardPage"
+            link="/Sell-Guide"
           />
 
           <ItemCard 
@@ -51,7 +52,7 @@ export default function Home() {
             title="Study Desk"
             detail="good for daily use"
             buttonText="Learn More"
-            link="cardPage"
+            link="/Sell-Guide"
           />
 
           <ItemCard
@@ -60,7 +61,7 @@ export default function Home() {
             title="Ready to Sell?"
             detail="Wondering how to sell your furniture? Learn in a few easy steps."
             buttonText="Learn to Sell"
-            link="/how-to-sell"
+            link="/Sell-Guide"
           />
 
         </div>

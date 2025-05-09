@@ -6,7 +6,8 @@ import NavBar from './component/navBar.jsx'
 import MessageCenter from './component/MessageCenter'
 import Home from './component/home.jsx'
 import SaveList from './component/saveList.jsx'
-import SearchPage from './component/searchpage'
+import SearchPage from './component/searchPage'
+import SellGuide from './component/sellGuide.jsx'
 
 
 function App() {
@@ -18,9 +19,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Home" element={<Home />} />
-          <Route path="/SearchPage" element={<SearchPage />} />
-          <Route path="/MessageCenter" element={<MessageCenter />} />
+          <Route path="/Marketplace" element={<SearchPage />} />
+          <Route path="/Inbox" element={<MessageCenter />} />
           <Route path="/SaveList" element={<SaveList />} />
+          <Route path="/Sell-Guide" element={<SellGuide />} />
         </Routes>
       </div>
       
