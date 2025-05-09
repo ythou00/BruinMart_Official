@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FiChevronLeft, FiSearch, FiMoreVertical, FiHeart } from 'react-icons/fi';
 import './MessageCenter.css';
+import Footer from './footer'
 
 const dummyMessages = [
   {
@@ -42,90 +43,94 @@ const MessageCenter = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
-    <div className="instagram-dm-container">
-      {!selectedThread ? (
-        <div className="dm-inbox">
-          <div className="dm-header">
-            <h2>janedoe</h2>
-          </div>
+    <> 
+      <div className="instagram-dm-container">
+        {!selectedThread ? (
+          <div className="dm-inbox">
+            <div className="dm-header">
+              <h2>janedoe</h2>
+            </div>
 
-          <div className="dm-search">
-            <FiSearch className="search-icon" />
-            <input 
-              type="text" 
-              placeholder="Search" 
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-          </div>
+            <div className="dm-search">
+              <FiSearch className="search-icon" />
+              <input 
+                type="text" 
+                placeholder="Search" 
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
 
-          <div className="dm-threads">
-            {dummyMessages
-              .filter(thread =>
-                thread.name.toLowerCase().includes(searchQuery.toLowerCase())
-              )
-              .map(thread => (
-              <div 
-                key={thread.id} 
-                className={`dm-thread ${thread.unread ? 'unread' : ''}`}
-                onClick={() => setSelectedThread(thread)}
-              >
-                <div className="thread-left">
-                  <img src={thread.profileImage} alt={thread.name} className="dm-profile-img" />
-                  <div className="thread-info">
-                    <span className="thread-name">{thread.name}</span>
-                    <span className="thread-preview">
-                      {thread.messages[thread.messages.length - 1].text}
-                    </span>
+            <div className="dm-threads">
+              {dummyMessages
+                .filter(thread =>
+                  thread.name.toLowerCase().includes(searchQuery.toLowerCase())
+                )
+                .map(thread => (
+                <div 
+                  key={thread.id} 
+                  className={`dm-thread ${thread.unread ? 'unread' : ''}`}
+                  onClick={() => setSelectedThread(thread)}
+                >
+                  <div className="thread-left">
+                    <img src={thread.profileImage} alt={thread.name} className="dm-profile-img" />
+                    <div className="thread-info">
+                      <span className="thread-name">{thread.name}</span>
+                      <span className="thread-preview">
+                        {thread.messages[thread.messages.length - 1].text}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="thread-right">
+                    <span className="thread-time">{thread.time}</span>
+                    {thread.unread && <div className="unread-badge"></div>}
                   </div>
                 </div>
-                <div className="thread-right">
-                  <span className="thread-time">{thread.time}</span>
-                  {thread.unread && <div className="unread-badge"></div>}
+              ))}
+            </div>
+          </div>
+        ) : (
+          <div className="dm-chat">
+            <div className="chat-header">
+              <FiChevronLeft 
+                className="back-icon" 
+                onClick={() => setSelectedThread(null)} 
+              />
+              <div className="chat-user">
+                <img src={selectedThread.profileImage} alt={selectedThread.name} className="chat-profile-img" />
+                <span>{selectedThread.name}</span>
+              </div>
+              <FiMoreVertical className="header-icon" />
+            </div>
+
+            <div className="chat-messages">
+              <div className="message-date">Today</div>
+
+              {selectedThread.messages.map((msg, index) => (
+                <div
+                  key={index}
+                  className={`message ${msg.from === "buyer" ? "received" : "sent"}`}
+                >
+                  <p>{msg.text}</p>
+                  <span className="message-time">
+                    {msg.time} {msg.from === "seller" && <span className="read-receipt">✓✓</span>}
+                  </span>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      ) : (
-        <div className="dm-chat">
-          <div className="chat-header">
-            <FiChevronLeft 
-              className="back-icon" 
-              onClick={() => setSelectedThread(null)} 
-            />
-            <div className="chat-user">
-              <img src={selectedThread.profileImage} alt={selectedThread.name} className="chat-profile-img" />
-              <span>{selectedThread.name}</span>
+              ))}
             </div>
-            <FiMoreVertical className="header-icon" />
-          </div>
 
-          <div className="chat-messages">
-            <div className="message-date">Today</div>
-
-            {selectedThread.messages.map((msg, index) => (
-              <div
-                key={index}
-                className={`message ${msg.from === "buyer" ? "received" : "sent"}`}
-              >
-                <p>{msg.text}</p>
-                <span className="message-time">
-                  {msg.time} {msg.from === "seller" && <span className="read-receipt">✓✓</span>}
-                </span>
+            <div className="chat-input">
+              <input type="text" placeholder="Message..." />
+              <div className="input-actions">
+                <button className="send-button">Send</button>
               </div>
-            ))}
-          </div>
-
-          <div className="chat-input">
-            <input type="text" placeholder="Message..." />
-            <div className="input-actions">
-              <button className="send-button">Send</button>
             </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+
+      <Footer />
+    </>
   );
 };
 

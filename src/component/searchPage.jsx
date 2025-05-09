@@ -17,50 +17,54 @@ export default function SearchPage() {
   ];
 
   return (
-    <div className="search-container">
-      <h1 className="search-title">Find What You Need</h1>
+    <>
+      <div className="search-container">
+        <h1 className="search-title">Find What You Need</h1>
 
-      <div className="filters">
-        <div>
-          <label htmlFor="type">Type:</label>
-          <select id="type">
-            <option value="">Select Type</option>
-            <option value="Type A">Type A</option>
-            <option value="Type B">Type B</option>
-            <option value="Type C">Type C</option>
-          </select>
+        <div className="filters">
+          <div>
+            <label htmlFor="type">Type:</label>
+            <select id="type">
+              <option value="">Select Type</option>
+              <option value="Type A">Type A</option>
+              <option value="Type B">Type B</option>
+              <option value="Type C">Type C</option>
+            </select>
+          </div>
+
+          <div>
+            <label htmlFor="price">Price:</label>
+            <select id="price">
+              <option value="">Select Price</option>
+              <option value="$10">$10</option>
+              <option value="$15">$15</option>
+              <option value="$20">$20</option>
+              <option value="$25">$25</option>
+              <option value="$30">$30</option>
+              <option value="$35">$35</option>
+              <option value="$40">$40</option>
+              <option value="$45">$45</option>
+              <option value="$50">$50</option>
+            </select>
+          </div>
         </div>
 
-        <div>
-          <label htmlFor="price">Price:</label>
-          <select id="price">
-            <option value="">Select Price</option>
-            <option value="$10">$10</option>
-            <option value="$15">$15</option>
-            <option value="$20">$20</option>
-            <option value="$25">$25</option>
-            <option value="$30">$30</option>
-            <option value="$35">$35</option>
-            <option value="$40">$40</option>
-            <option value="$45">$45</option>
-            <option value="$50">$50</option>
-          </select>
+        <div className="card-grid">
+          {items.map((item, index) => (
+            <ItemCard
+              key={index}
+              imgSrc={item.image}
+              imgAlt={item.label}
+              title={item.label}
+              detail={item.price}
+              buttonText="Learn More"
+              link="/sell-guide"
+            />
+          ))}
         </div>
       </div>
-
-      <div className="card-grid">
-        {items.map((item, index) => (
-          <ItemCard
-            key={index}
-            imgSrc={item.image}
-            imgAlt={item.label}
-            title={item.label}
-            detail={item.price}
-            buttonText="Learn More"
-            link="/Sell-Guide"
-          />
-        ))}
-      </div>
-    </div>
+      
+      <Footer />
+    </>
   );
 }
