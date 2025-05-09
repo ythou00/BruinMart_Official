@@ -2,6 +2,7 @@ import React from 'react';
 import MemberCard from './memberCard';
 import './about.css';
 import moveInImage from '../assets/bruin-move-in.jpg'
+import memberImage1 from '../assets/ythou.jpg'
 import Footer from './footer'
 
 
@@ -49,7 +50,7 @@ export default function About() {
             <MemberCard
                 name="Yu-Ting Hou"
                 role="CTO"
-                imgSrc={moveInImage}
+                imgSrc={memberImage1}
                 description="Grace leads the company with a vision of innovation and community-driven solutions."
             />
             <MemberCard
