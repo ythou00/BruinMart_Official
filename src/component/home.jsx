@@ -6,6 +6,7 @@ import deskClockImage from '../assets/deskclock.jpg';
 import deskshelfImage from '../assets/deskshelf.jpg';
 import studyDeskImage from '../assets/studydesk.jpg';
 import teenTitansImage from '../assets/teen_titans.jpg';
+import logoImage from '../assets/logo.png';
 import Footer from './footer';
 
 
@@ -52,6 +53,16 @@ export default function Home() {
             buttonText="Learn More"
             link="cardPage"
           />
+
+          <ItemCard
+            imgSrc={logoImage}
+            imgAlt="How to sell"
+            title="Ready to Sell?"
+            detail="Wondering how to sell your furniture? Learn in a few easy steps."
+            buttonText="Learn to Sell"
+            link="/how-to-sell"
+          />
+
         </div>
         
       </section>
