@@ -8,7 +8,6 @@ import studyDeskImage from '../assets/studydesk.jpg';
 import teenTitansImage from '../assets/teen_titans.jpg';
 import logoImage from '../assets/logo.png';
 import Footer from './footer';
-import SellGuidePage from './sellGuide'
 
 
 export default function Home() {
@@ -80,7 +79,7 @@ export default function Home() {
                 platform is built for safe, verified, on-campus exchanges that work around the student lifestyle.
               </p>
               <div className="quote-footer">
-                <a href="/about" className="about-button">About Us</a>
+                <a href="/about-us" className="about-button">About Us</a>
                 <p className="quote-mark quote-end">”</p>
               </div>
             </div>

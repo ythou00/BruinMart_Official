@@ -9,6 +9,7 @@ import SaveList from './component/saveList.jsx'
 import SearchPage from './component/searchPage'
 import SellGuide from './component/sellGuide.jsx'
 import LoginPage from './component/page1.jsx'
+import AboutPage from './component/about.jsx'
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/save-list" element={<SaveList />} />
           <Route path="/sell-guide" element={<SellGuide />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/about-us" element={<AboutPage />} />
         </Routes>
       </div>
       
