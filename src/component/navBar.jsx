@@ -19,10 +19,10 @@ export default function NavBar() {
             </ul>
         </div>
         <div className="right">
-            {/*
-            <SearchBar placeholder="What are you looking for?" data={SearchData}/>
-            */}
-            <VscAccount />  {/* Import a React icon for to use for login icon*/}
+            <Link to="login" className="login-link">
+                <VscAccount className="login-icon"/>  {/* Import a React icon for to use for login icon*/}
+                <span className="login-text">Login / Sign Up</span>
+            </Link>
         </div>
         
     </nav>
