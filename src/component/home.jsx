@@ -1,0 +1,100 @@
+import React from 'react';
+import './home.css'
+import HeroSection from './heroSection'; // make sure the path is correct
+import ItemCard from "./itemCard";
+import deskClockImage from '../assets/deskclock.jpg';
+import deskshelfImage from '../assets/deskshelf.jpg';
+import studyDeskImage from '../assets/studydesk.jpg';
+import teenTitansImage from '../assets/teen_titans.jpg';
+import logoImage from '../assets/logo.png';
+import Footer from './footer';
+import SellGuidePage from './sellGuide'
+
+
+export default function Home() {
+  return (
+    <div>
+      <HeroSection />
+      <section className="our-statement">
+        <h1>What We Do</h1>
+        <p>
+          <strong>Our Focus:</strong> Create a safe, efficient, and community-driven platform for UCLA students to make transactions conveniently. 
+          We also want to promote affordability for students looking for budget-friendly options, streamline secure transactions, 
+          verify profiles, and ensure campus-based exchange options. The marketplace should ultimately be the go-to place for all 
+          student-to-student exchanges, making buying and selling trustworthy and seamless.
+        </p>
+      </section>
+
+      <section className="popular-collection">
+        <h2>Popular Collection</h2>
+        <div className="card-grid">
+          <ItemCard 
+            imgSrc={deskClockImage}
+            imgAlt="Card Image"
+            title="Desk Clock"
+            detail="good for daily use"
+            buttonText="Learn More"
+            link="/Sell-Guide"
+          />
+
+          <ItemCard 
+            imgSrc={deskshelfImage}
+            imgAlt="Card Image"
+            title="Desk Shelf"
+            detail="good for daily use"
+            buttonText="Learn More"
+            link="/Sell-Guide"
+          />
+
+          <ItemCard 
+            imgSrc={studyDeskImage}
+            imgAlt="Card Image"
+            title="Study Desk"
+            detail="good for daily use"
+            buttonText="Learn More"
+            link="/Sell-Guide"
+          />
+
+          <ItemCard
+            imgSrc={logoImage}
+            imgAlt="How to sell"
+            title="Ready to Sell?"
+            detail="Wondering how to sell your furniture? Learn in a few easy steps."
+            buttonText="Learn to Sell"
+            link="/Sell-Guide"
+          />
+
+        </div>
+        
+      </section>
+      <section className="about-section">
+        <div className="about-card">
+          <img src={teenTitansImage} alt="About us" className="about-image" />
+          <div className="about-text">
+            <div className="about-text-inner">
+              <h2>Move Out. Cash In. Move In. Save Big.</h2>
+              <p className="quote-mark">“</p>
+              <p className="us-detail">We’re a student-run marketplace created by Bruins, for Bruins. Whether you're moving out or settling in, 
+                our goal is to help UCLA students buy and sell furniture and essentials easily, 
+                affordably, and securely. Say goodbye to overpriced furniture and sketchy meetups—our 
+                platform is built for safe, verified, on-campus exchanges that work around the student lifestyle.
+              </p>
+              <div className="quote-footer">
+                <a href="/about" className="about-button">About Us</a>
+                <p className="quote-mark quote-end">”</p>
+              </div>
+            </div>
+          </div>
+          <div className="bg-block block1"></div>
+          <div className="bg-block block2"></div>
+        </div>
+      </section>
+
+      <section className='footer'>
+        <Footer />
+      </section>      
+
+
+    </div>
+  );
+}
