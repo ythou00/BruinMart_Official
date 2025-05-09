@@ -12,8 +12,8 @@ export default function NavBar() {
         <div className="center">
             <ul>
                 <li><Link to="/Home" className="nav-link">Home</Link></li>
-                <li className="active"><Link to="/SearchPage" className="nav-link">Search Page</Link></li>
-                <li><Link to="/MessageCenter" className="nav-link">Message Center</Link></li>
+                <li className="active"><Link to="/SearchPage" className="nav-link">Marketplace</Link></li>
+                <li><Link to="/MessageCenter" className="nav-link">Inbox</Link></li>
                 <li><Link to="/SaveList" className="nav-link">Save List</Link></li>
             </ul>
         </div>
