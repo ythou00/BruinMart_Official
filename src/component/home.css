@@ -1,0 +1,160 @@
+  .our-statement {
+    background-color: white;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .our-statement h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .our-statement p {
+    max-width: 845px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-weight: 500;
+  }
+  
+  .popular-collection {
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .popular-collection h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+
+  .about-section {
+    position: relative;
+    margin: 4rem 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-card {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2rem;
+    max-width: 900px;
+    width: 100%;
+    z-index: 2;
+  }
+
+  /* Ensure inner content has z-index above bg-blocks */
+  .about-card > *:not(.bg-block) {
+    position: relative;
+    z-index: 3;
+  }
+  
+  .about-image {
+    position: relative;
+    /* left: -150px; */
+    width: 50%;
+    max-width: 600px;
+    height: 400px;
+    border-radius: 10px;
+    margin-right: 2rem;
+    flex-shrink: 1;
+  }
+  
+  .about-text {
+    flex: 1;
+    color: #ffffff;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .about-text-inner {
+    width: 100%;
+  }
+  
+  .about-text h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  .quote-footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .about-button {
+    margin-top: 0.5rem; /* reduce from 1rem */
+    margin-bottom: 0.5rem;
+    background-color: #f4a72c;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .quote-mark {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255)fff;
+    font-weight: bold;
+  }
+
+  .us-detail {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .quote-end {
+    text-align: right;
+  }
+  
+  
+  .bg-block {
+    position: absolute;
+    /* z-index: 1; */
+    border-radius: 4px;
+  }
+  
+  .block1 {
+    background-color: #000000;
+    width: 140%;          /* Make it wider than the card */
+    height: 100%;
+    top: 15px;
+    left: -20%;           /* Shift it left to center the wider block */
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+  }
+  
+  .block2 {
+    background-color: #f4a72c;
+    width: 70%;             /* ✅ keep original width */
+    height: 30px;
+    bottom: -35px;
+    border-radius: 7px;
+    left: calc(-18%);       /* ✅ align left edge with .block1's */
+    z-index: 1;
+  }
+
+  
