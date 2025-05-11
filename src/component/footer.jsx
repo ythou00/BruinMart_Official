@@ -1,14 +1,20 @@
 import React from 'react';
 import './footer.css'; // create this next
-import logoImage from '../assets/react.svg'
+import { Link } from 'react-router-dom';
+import logoImage from '../assets/logo-bm.png'
 
 export default function Footer() {
   return (
     <section className="end-hero-section">
       <div className="footer-container">
         <div className="footer-left">
-          <img src={logoImage} alt="BruinMart logo" className="footer-logo" />
-          <h2 className='logo-title'>BruinMart</h2>
+          <div className="footer-brand">
+            <img src={logoImage} alt="BruinMart logo" className="footer-logo" />
+            <h2 className="logo-title">BruinMart</h2>
+          </div>
+          <div className="footer-links">
+            <Link to="/about-us" className="footer-link">About Us</Link>
+          </div>
         </div>
         <div className="footer-right">
           <h3 className='subtitle'>Subscribe to our newsletter</h3>
