@@ -1,4 +1,4 @@
-import './VerifyUser.css'
+import './VerifyUserStyles.css'
 
 function VerifyUser() {
     return (
