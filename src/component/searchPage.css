@@ -37,4 +37,8 @@
     justify-content: center;
     gap: 2rem;
   }
+
+  .space-holder {
+    margin-top: 2rem;
+  }
   
