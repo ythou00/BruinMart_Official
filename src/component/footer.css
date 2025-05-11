@@ -1,75 +1,99 @@
 .end-hero-section {
-    background-color: rgb(0, 0, 0);
-    padding: 1rem 2rem;
-    border-top: 1px solid #ccc;
-  }
-  
-  .footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding-bottom: 1rem;
-  }
-  
-  .footer-left {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-  
-  .logo-title {
-    color: #ffffff;
-  }
+  background-color: rgb(0, 0, 0);
+  padding: 1rem 2rem;
+  border-top: 1px solid #ccc;
+}
 
-  .subtitle {
-    color: white;
-  }
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
 
-  .email-detail {
-    color: white;
-  }
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* spacing between logo and text */
+}
 
-  .footer-logo {
-    width: 32px;
-    height: 32px;
-  }
-  
-  .footer-right {
-    max-width: 400px;
-  }
-  
-  .footer-right h4 {
-    font-weight: bold;
-    margin-bottom: 0.25rem;
-  }
-  
-  .email-input {
-    width: 85%;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    border: 1px solid #ffffff;
-    border-radius: 6px;
-  }
-  
-  .subscribe-button {
-    background-color: #f4a72c;
-    color: rgb(0, 0, 0);
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
 
-  }
+.footer-link {
+color: #f4a72c;
+text-decoration: none;
+font-weight: 500;
+background: none;         /* ← removes highlight */
+outline: none;  
+}
+
+.footer-link:hover {
+text-decoration: transparent;
+background: none;
+}
   
-  .footer-credit {
-    color: white;
-    text-align: center;
-    margin-top: 1.9rem;
-    font-weight: bold;
-    font-size: 0.9rem;
-  }
-  
+.logo-title {
+  color: #ffffff;
+}
+
+.subtitle {
+  color: white;
+}
+
+.email-detail {
+  color: white;
+}
+
+.footer-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.footer-right {
+  max-width: 400px;
+}
+
+.footer-right h4 {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.email-input {
+  width: 85%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+}
+
+.subscribe-button {
+  background-color: #f4a72c;
+  color: rgb(0, 0, 0);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+
+}
+
+.footer-credit {
+  color: white;
+  text-align: center;
+  margin-top: 1.9rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
