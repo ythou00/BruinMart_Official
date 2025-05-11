@@ -51,25 +51,25 @@ export default function About() {
                 name="Yu-Ting Hou"
                 role="CTO"
                 imgSrc={memberImage1}
-                description="Grace leads the company with a vision of innovation and community-driven solutions."
+                description="YT leads the company with a vision of innovation and community-driven solutions."
             />
             <MemberCard
                 name="Heidi Yu"
                 role="CTO"
                 imgSrc={moveInImage}
-                description="Luis architects our technology and ensures smooth, scalable systems."
+                description="Heidi architects our technology and ensures smooth, scalable systems."
             />
             <MemberCard
                 name="Paul Kang"
                 role="Chief DEIB & Workforce Advisor"
                 imgSrc={moveInImage}
-                description="Dr. Page guides us on inclusive practices and workforce development."
+                description="Paul guides us on inclusive practices and workforce development."
             />
             <MemberCard
                 name="Isaac Lee"
                 role="Chief DEIB & Workforce Advisor"
                 imgSrc={moveInImage}
-                description="Dr. Page guides us on inclusive practices and workforce development."
+                description="Isaac guides us on inclusive practices and workforce development."
             />
         </div>
         <Footer />
