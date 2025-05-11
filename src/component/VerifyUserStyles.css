@@ -1,0 +1,49 @@
+.h1 {
+    display: block;
+    position: relative;
+    bottom: 120px;
+    right: 450px;
+    font-size: 2.5em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.h1-subtext {
+    display: block;
+    position: relative;
+    bottom: 140px;
+    right: 405px;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.title {
+    display: block;
+    position: relative;
+    text-align: left;
+    bottom: 350px;
+    left: 300px;
+    font-size: 2em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.caption {
+    display: block;
+    position: relative;
+    text-align: left;
+    bottom: 345px;
+    left: 295px;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+}
