@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import ItemCard from './ItemCard'; // Make sure the path is correct
-import './searchpage.css';
+import './searchPage.css';
+import ItemCard from './itemCard';
+import Footer from './footer';
 
 export default function SearchPage() {
   const [selectedType, setSelectedType] = useState('');
@@ -22,7 +23,6 @@ export default function SearchPage() {
     { label: "Whisk", price: "$10", type: "Kitchen Supplies", image: "https://upload.wikimedia.org/wikipedia/commons/8/85/Schneebesen1.JPG" },
     { label: "Sketch Book", price: "$15", type: "Art", image: "https://i.etsystatic.com/16437030/r/il/782ad4/5491474521/il_570xN.5491474521_l3yd.jpg" },
     { label: "Glitter", price: "$20", type: "Art", image: "https://www.wildflowersnailshop.com/cdn/shop/products/micro_glitter_10g.jpeg?v=1626278285" },
-
   ];
 
   const filteredItems = items.filter((item) => {
@@ -33,74 +33,63 @@ export default function SearchPage() {
 
   return (
     <div style={{ backgroundColor: 'white', minHeight: '100vh', color: 'black' }}>
-      <div>
-        <h1 style={{ marginBottom: '100px', textAlign: 'center', marginLeft: '10px' }}>Popular Collection</h1>
+      <h1 style={{ marginBottom: '100px', textAlign: 'center', marginLeft: '10px' }}>Popular Collection</h1>
 
-        {/* Dropdown Filters */}
-        <div style={{ display: 'flex', gap: '20px', marginBottom: '40px', marginLeft: '1100px' }}>
-          <div>
-            <label htmlFor="type" style={{ fontSize: '16px', marginRight: '10px' }}>Type:</label>
-            <select
-              id="type"
-              style={{ padding: '10px', fontSize: '14px' }}
-              value={selectedType}
-              onChange={(e) => setSelectedType(e.target.value)}
-            >
-              <option value="">Select Type</option>
-              <option value="Furniture">Furniture</option>
-              <option value="Kitchen Supplies">Kitchen Supplies</option>
-              <option value="Electronic">Electronic</option>
-              <option value="Art">Art</option>
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="price" style={{ fontSize: '16px', marginRight: '10px' }}>Price:</label>
-            <select
-              id="price"
-              style={{ padding: '10px', fontSize: '14px' }}
-              value={selectedPrice}
-              onChange={(e) => setSelectedPrice(e.target.value)}
-            >
-              <option value="">Select Price</option>
-              <option value="$10">$10</option>
-              <option value="$15">$15</option>
-              <option value="$20">$20</option>
-              <option value="$25">$25</option>
-              <option value="$30">$30</option>
-              <option value="$35">$35</option>
-              <option value="$40">$40</option>
-              <option value="$45">$45</option>
-              <option value="$50">$50</option>
-            </select>
-          </div>
+      {/* Dropdown Filters */}
+      <div style={{ display: 'flex', gap: '20px', marginBottom: '40px', marginLeft: '1100px' }}>
+        <div>
+          <label htmlFor="type" style={{ fontSize: '16px', marginRight: '10px' }}>Type:</label>
+          <select
+            id="type"
+            style={{ padding: '10px', fontSize: '14px' }}
+            value={selectedType}
+            onChange={(e) => setSelectedType(e.target.value)}
+          >
+            <option value="">Select Type</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Kitchen Supplies">Kitchen Supplies</option>
+            <option value="Electronic">Electronic</option>
+            <option value="Art">Art</option>
+          </select>
         </div>
 
-        {/* Grid of Items */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '200px',
-            width: '150%',
-            maxWidth: '1500px',
-            textAlign: 'center',
-            marginLeft: '575px'
-          }}
-        >
-          {filteredItems.map((item, index) => (
-            <ItemCard
-              key={index}
-              imgSrc={item.image}
-              imgAlt={item.label}
-              title={item.label}
-              detail={`Price: ${item.price} | Type: ${item.type}`}
-              buttonText="View Item"
-              link="#"
-            />
-          ))}
+        <div>
+          <label htmlFor="price" style={{ fontSize: '16px', marginRight: '10px' }}>Price:</label>
+          <select
+            id="price"
+            style={{ padding: '10px', fontSize: '14px' }}
+            value={selectedPrice}
+            onChange={(e) => setSelectedPrice(e.target.value)}
+          >
+            <option value="">Select Price</option>
+            <option value="$10">$10</option>
+            <option value="$15">$15</option>
+            <option value="$20">$20</option>
+            <option value="$25">$25</option>
+            <option value="$30">$30</option>
+            <option value="$35">$35</option>
+            <option value="$40">$40</option>
+            <option value="$45">$45</option>
+            <option value="$50">$50</option>
+          </select>
         </div>
       </div>
+
+      <div className="card-grid">
+        {filteredItems.map((item, index) => (
+          <ItemCard
+            key={index}
+            imgSrc={item.image}
+            imgAlt={item.label}
+            title={item.label}
+            detail={`Price: ${item.price} | Type: ${item.type}`}
+            buttonText="Learn More"
+            link="/sell-guide"
+          />
+        ))}
+      </div>
+
+      <Footer />
     </div>
   );
 }
