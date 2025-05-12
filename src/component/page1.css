@@ -1,3 +1,15 @@
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
 .welcome {
     position: relative;
     top: 25px;
@@ -16,13 +28,12 @@
 }
 
 .enter-flex {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 125px;
-    left: 635px;
-    gap: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 4rem;
 }
+
 
 .enter-input-flex {
     display: flex;
@@ -41,23 +52,19 @@
 }
 
 .login-button {
-    position: relative;
-    top: 180px;
-    left: 663px;
-    height: 35px;
-    width: 150px;
-
-    background-color: #f4a72c;
-    color: black;
-    font-size: 1.2rem;
-    border-radius: 5px;
+  margin-top: 2rem;
+  height: 35px;
+  width: 150px;
+  background-color: #f4a72c;
+  color: black;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .new {
-    position: relative;
-    top: 200px;
-    text-align: center;
-
-    font-size: 0.7rem;
-    color: darkgrey;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: darkgrey;
+  text-align: center;
 }

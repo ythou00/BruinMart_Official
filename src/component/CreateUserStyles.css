@@ -1,110 +1,74 @@
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 .new-user {
-    position: relative;
-    top: 75px;
-    left: 120px;
-    
-    font-size: 3rem;
-    font-weight: bold;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  text-align: center;
 }
 
 .new-subtext {
-    position: relative;
-    top: 80px;
-    left: 250px;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
-.names-flex {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    top: 30px;
-    left: 802px;
-    gap: 192px;
-    text-align: left;
-}
-
-.names-text-flex {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    top: 30px;
-    left: 800px;
-    gap: 70px;
-}
-
+.names-flex,
+.names-text-flex,
+.select-text-flex,
 .select-flex {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    top: 60px;
-    left: 800px;
-    gap: 70px;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
-.select-text-flex {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    top: 60px;
-    left: 802px;
-    gap: 210px;
+.text-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
-.text-input-flex{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.text-flex{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 90px;
-    left: 800px;
-    gap: 30px;
-    text-align: left;
+.text-input-flex {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 .button {
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    position: relative;
-    cursor: pointer;
-
-    border-radius: 5px;
-    height: 35px;
-    width: 150px;
-}
-
-.next-button {
-    top: 180px;
-    left: 967px;
-}
-
-.upload-button {
-    top: 0px;
-    right: 400px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  height: 35px;
+  width: 150px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 2rem;
 }
 
 .textbox {
-    position: relative;  
-    height: 30px;
-    width: 200px;
-    border-radius: 5px;
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
 }
 
 .textbox-long {
-    position: relative;
-    height: 30px;
-    width: 470px;
-    border-radius: 5px;
+  height: 30px;
+  width: 470px;
+  border-radius: 5px;
 }
 
 .selectbox {
-    position: relative;
-    height: 30px;
-    width: 200px;
-    border-radius: 5px;
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
 }

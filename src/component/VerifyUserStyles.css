@@ -1,49 +1,36 @@
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  text-align: center;
+}
+
 .h1 {
-    display: block;
-    position: relative;
-    bottom: 120px;
-    right: 450px;
-    font-size: 2.5em;
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0.5em 0;
 }
 
 .h1-subtext {
-    display: block;
-    position: relative;
-    bottom: 140px;
-    right: 405px;
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
-    margin-left: 0;
-    margin-right: 0;
+  font-size: 1.25em;
+  margin: 0.25em 0;
 }
 
 .title {
-    display: block;
-    position: relative;
-    text-align: left;
-    bottom: 350px;
-    left: 300px;
-    font-size: 2em;
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 1em 0 0.5em 0;
 }
 
 .caption {
-    display: block;
-    position: relative;
-    text-align: left;
-    bottom: 345px;
-    left: 295px;
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
-    margin-left: 0.25em;
-    margin-right: 0.25em;
+  font-size: 1.1em;
+  margin: 0.25em 0;
+  max-width: 600px;
 }

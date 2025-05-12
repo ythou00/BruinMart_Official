@@ -6,29 +6,30 @@ export default function home() {
     const navigate = useNavigate();
     
     return (
-        <>
-            <div className = "welcome">Welcome!</div>
-            <div className = "welcome-subtext">"Helping Students Make Moves"</div>
-            
-            <div className = "enter-flex">
-                <div className = "enter-input-flex">
-                    <label htmlFor = "Username" className = "label">Username</label>
-                    <input type = "text" className = "textbox"/>
-                </div>
+        <div className="centered-container">
+            <div className="welcome">Welcome!</div>
+            <div className="welcome-subtext">"Helping Students Make Moves"</div>
 
-                <div className = "enter-input-flex">
-                    <label htmlFor = "Password" className = "label">Password</label>
-                    <input type = "password" className = "textbox"/>
-                </div>
+            <div className="enter-flex">
+            <div className="enter-input-flex">
+                <label htmlFor="Username" className="label">Username</label>
+                <input type="text" className="textbox" />
             </div>
 
-            <button 
-                className = "login-button"
-                onClick = {() => navigate("/home")}>
-                    Login
+            <div className="enter-input-flex">
+                <label htmlFor="Password" className="label">Password</label>
+                <input type="password" className="textbox" />
+            </div>
+            </div>
+
+            <button className="login-button" onClick={() => navigate("/home")}>
+            Login
             </button>
-            <div className = "new">New to BruinMarket? <Link to = "/CreateUser">Create an account</Link></div>
-        </>
+
+            <div className="new">
+            New to BruinMarket? <Link to="/create-user">Create an account</Link>
+            </div>
+        </div>
     );
 
 }
