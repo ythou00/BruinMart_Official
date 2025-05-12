@@ -1,23 +1,38 @@
-.centered-container {
+.create-user-page {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   padding: 2rem;
-  box-sizing: border-box;
-  max-width: 100%;
-  overflow-x: hidden;
+  gap: 4rem;
+  background-color: #f9f9f9;
 }
+
+.welcome-side {
+  flex: 1;
+  text-align: left;
+  padding: 2rem;
+}
+
 .new-user {
   font-size: 3rem;
   font-weight: bold;
-  margin-top: 2rem;
-  text-align: center;
+  margin-bottom: 1rem;
+  text-align: left;
 }
 
 .new-subtext {
-  margin-top: 0.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
+  font-size: 1.2rem;
+  color: #444;
+  text-align: left;
+}
+
+/* Optional: shrink card on small screen */
+.form-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .names-flex,
@@ -71,4 +86,14 @@
   height: 30px;
   width: 200px;
   border-radius: 5px;
+}
+
+.create-user-card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0px 10px 8px #999;
+  padding: 2rem 3rem;
+  max-width: 600px;
+  width: 90%;
+  margin-top: 2rem;
 }
