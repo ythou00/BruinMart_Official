@@ -19,7 +19,6 @@ function App() {
     <>
       <NavBar />
       <div className="container">
-        {/* <h1>Web Dev Simplified!!!!!!</h1>  */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
@@ -29,16 +28,11 @@ function App() {
           <Route path="/sell-guide" element={<SellGuide />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/about-us" element={<AboutPage />} />
-          <Route path = "/CreateUser" element = {<CreateUser/>}/>
-          <Route path = "/SelectInterests" element = {<SelectInterests/>}/>
-          <Route path = "/FinishUser" element = {<FinishUser/>}/>
+          <Route path = "/create-user" element = {<CreateUser/>}/>
+          <Route path = "/user-setup" element = {<SelectInterests/>}/>
+          <Route path = "/setup-complete" element = {<FinishUser/>}/>
         </Routes>
       </div>
-      
-      {/* <HeroSection /> */}
-      {/* Your new Message Center component */}
-      {/* <MessageCenter /> */}
-      {/* <SearchPage/> */}
     </>
   );
 }
