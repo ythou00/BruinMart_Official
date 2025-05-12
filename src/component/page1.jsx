@@ -1,35 +1,52 @@
-import React from 'react'
-import { useNavigate, Link } from 'react-router-dom'
-import './page1.css'
+import React from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import './page1.css';
 
-export default function home() {
-    const navigate = useNavigate();
-    
-    return (
-        <div className="centered-container">
-            <div className="welcome">Welcome!</div>
-            <div className="welcome-subtext">"Helping Students Make Moves"</div>
+export default function Home() {
+  const navigate = useNavigate();
 
-            <div className="enter-flex">
-            <div className="enter-input-flex">
-                <label htmlFor="Username" className="label">Username</label>
-                <input type="text" className="textbox" />
-            </div>
+  return (
+    <div className="login-page">
+      {/* LEFT LOGIN FORM SIDE */}
+      <div className="login-form-side">
+        <div className="enter-flex">
+          <h1 className="welcome">Welcome!</h1>
+          <h3 className="welcome-subtext">"Helping Students Make Moves"</h3>
 
-            <div className="enter-input-flex">
-                <label htmlFor="Password" className="label">Password</label>
-                <input type="password" className="textbox" />
-            </div>
-            </div>
+          <div className="enter-input-flex">
+            <label htmlFor="Username" className="label">Username</label>
+            <input type="text" className="textbox" />
+          </div>
 
-            <button className="login-button" onClick={() => navigate("/home")}>
+          <div className="enter-input-flex">
+            <label htmlFor="Password" className="label">Password</label>
+            <input type="password" className="textbox" />
+          </div>
+
+          <button className="login-button" onClick={() => navigate("/home")}>
             Login
-            </button>
+          </button>
 
-            <div className="new">
+          <div className="new">
             New to BruinMarket? <Link to="/create-user">Create an account</Link>
+          </div>
+        </div>
+      </div>
+      {/* RIGHT IMAGE SIDE */}
+      <div className="login-image-side">
+        <div className="image-overlay-text">
+            <div className="image-credit-login">
+                Image Credit:{' '}
+                <a
+                href="https://studios.com/ucla-weyburn-terrace-paseo-and-commons-apartments.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                Studios
+                </a>
             </div>
         </div>
-    );
-
+      </div>
+    </div>
+  );
 }
