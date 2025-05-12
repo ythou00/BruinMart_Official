@@ -7,7 +7,9 @@ function CreateUser() {
   const navigate = useNavigate();
 
     return (
-      <form onSubmit={{handleSubmit}}>
+      <>
+        <div className = "new-user">Welcome to BruinMart!</div>
+        <div className = "new-subtext">We are so happy to have you hear!</div>
 
         <div className = "names-flex">
           <div>First Name</div>
@@ -15,8 +17,8 @@ function CreateUser() {
         </div>
 
         <div className = "names-text-flex">
-          <input type = "text" />
-          <input type = "text"/>
+          <input type = "text" className = "textbox"/>
+          <input type = "text" className = "textbox"/>
         </div>
 
         <div className = "select-text-flex">
@@ -25,7 +27,7 @@ function CreateUser() {
         </div>
 
         <div className = "select-flex">
-          <select name = "class-year">
+          <select name = "class-year" className = "selectbox">
             <option value = "">Please select one...</option>
             <option value = "2024">2024</option>
             <option value = "2025">2025</option>
@@ -35,7 +37,7 @@ function CreateUser() {
             <option value = "2029">2029</option>
           </select>
 
-          <select name = "gender">
+          <select name = "gender" className = "selectbox">
             <option value = "">Please select one...</option>
             <option value = "Female">Female</option>
             <option value = "Male">Male</option>
@@ -47,21 +49,19 @@ function CreateUser() {
         <div className = "text-flex">
           <div className = "text-input-flex">
             <div>Major</div>
-            <input type = "text"/>
+            <input type = "text" className = "textbox-long"/>
           </div>
 
           <div className = "text-input-flex">
             <div>Create Username</div>
-            <input type = "text"/>
+            <input type = "text" className = "textbox-long"/>
           </div>
 
           <div className = "text-input-flex">
             <div>Create Password</div>
-            <input type = "password"/>
+            <input type = "password" className = "textbox-long"/>
           </div>
         </div>
-
-        <button type = "button" className = "button upload-button">Upload</button>
 
         <button type = "button"
           className = "button next-button"
@@ -69,7 +69,7 @@ function CreateUser() {
             Next    &gt;
         </button>
         
-      </form>
+      </>
     );
    }
    

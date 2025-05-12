@@ -1,0 +1,63 @@
+.welcome {
+    position: relative;
+    top: 25px;
+    text-align: center;
+
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.welcome-subtext {
+    position: relative;
+    top: 25px;
+    text-align: center;
+
+    font-size: 1rem;
+}
+
+.enter-flex {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 125px;
+    left: 635px;
+    gap: 30px;
+}
+
+.enter-input-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.textbox {
+    position: relative;
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.label {
+    font-size: 1.2rem;
+}
+
+.login-button {
+    position: relative;
+    top: 180px;
+    left: 663px;
+    height: 35px;
+    width: 150px;
+
+    background-color: #f4a72c;
+    color: black;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.new {
+    position: relative;
+    top: 200px;
+    text-align: center;
+
+    font-size: 0.7rem;
+    color: darkgrey;
+}
