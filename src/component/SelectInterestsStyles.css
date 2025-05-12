@@ -1,36 +1,87 @@
 .interest {
     position: relative;
-    bottom: 30px;
-    gap: 0px;
-    font-size: 2em;
+    top: 50px;
+    text-align: center;
+    font-size: 3em;
     font-weight: bold;
 }
 
-.caption {
+.interest-caption {
     position: relative;
-    bottom: 30px;
-    gap: 0px;
+    top: 50px;
+    text-align: center;
 }
 
-.next{
-    background-color: #0047AB;
+.to-finish{
+    background-color: black;
     color: white;
     position: relative;
-    width: 150px;
-    bottom: 250px;
-    left: 550px;
     cursor: pointer;
+
+    width: 150px;
+    top: 450px;
+    left: 665px;
+    font-size: 1.2rem;
+    border-radius: 5px;
 }
 
-.container {
-    display: grid;
+.button-container {
     position: relative;
-    top: 10px;
-    grid-template-columns: auto auto auto auto;
-    gap: 25px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    top: 125px;
+    gap: 30px;
+}
+
+.container1 {
+    position: relative;
+    display: flex;
+
+    gap: 30px;
+}
+
+.container2 {
+    position: relative;
+    display: flex;
+
+    gap: 30px;
+}
+
+.container3 {
+    position: relative;
+    display: flex;
+
+    gap: 30px;
+}
+
+.interest-button {
+    position: relative;
+    height: 35px;
+
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.one {
+    width: 175px;
+}
+
+.two {
+    width: 120px;
+}
+
+.three {
+    width: 175px;
+}
+
+.not-looking-for {
+    background-color: black;
+    color: white;
 }
 
 .looking-for {
-    background-color: #0047AB;
-    color: white;
+    background-color: #f4a72c;
+    color: black;
 }

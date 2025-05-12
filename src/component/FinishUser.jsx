@@ -6,14 +6,14 @@ function FinishUser() {
 
   return (
     <>
-      <div className = "h1">Congrats! 🎉</div>
-      <div className = "caption">You successfully created your account!</div>
+      <div className = "congrats">Congrats! 🎉</div>
+      <div className = "caption">You've successfully created your account!</div>
       <div className = "bear">🧸</div>
 
       <button type = "button" 
-      className = "finish"
-      onClick = {() => navigate()}>
-        Finish    &gt;
+      className = "done"
+      onClick = {() => navigate("/home")}>
+        Done!
       </button>
     </>
   )

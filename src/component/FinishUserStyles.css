@@ -1,56 +1,38 @@
-.h1 {
+.congrats {
     position: relative;
-    top: 30px;
-    font-size: 2.5em;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
+    top: 210px;
+    text-align: center;
+    font-size: 3em;
     font-weight: bold;
     gap: 0px;
 }
 
 .caption {
     position: relative;
-    top: 10px;
+    top: 210px;
+    text-align: center;
     font-size: 1.5em;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
     gap: 0px;
 }
 
 .bear {
     position: relative;
-    bottom: px;
-    font-size: 3em;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
+    top: 210px;
+    text-align: center;
+    font-size: 4em;
     gap: 0px;
 }
 
-.finish{
-    background-color: #0047AB;
-    color: white;
+.done{
     position: relative;
-    width: 150px;
-    bottom: 400px;
-    left: 550px;
+    width: 125px;
+    height: 40px;
+    top: 275px;
+    left: 672px;
+
+    background-color: black;
+    color: white;
     cursor: pointer;
-}
-
-.container {
-    display: grid;
-    position: relative;
-    top: 10px;
-    grid-template-columns: auto auto auto auto;
-    gap: 25px 25px;
-}
-
-.looking-for {
-    background-color: #0047AB;
-    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
 }
