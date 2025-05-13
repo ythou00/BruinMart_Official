@@ -66,9 +66,11 @@ function CreateUser() {
               </div>
             </div>
 
-            <button type="button" className="button next-button" onClick={() => navigate("/user-setup")}>
-              Next ⟶
-            </button>
+            <div className="button-container">
+              <button type="button" className="button-next-button" onClick={() => navigate("/user-setup")}>
+                Next ⟶
+              </button>
+            </div>
           </div>
         </div>
       </div>

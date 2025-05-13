@@ -11,7 +11,7 @@
 
 .welcome-side {
   flex: 1;
-  text-align: left;
+  text-align: center;
   padding: 2rem;
 }
 
@@ -19,13 +19,13 @@
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  text-align: left;
+  text-align: center;
 }
 
 .new-subtext {
   font-size: 1.2rem;
   color: #444;
-  text-align: left;
+  text-align: center;
 }
 
 /* Optional: shrink card on small screen */
@@ -57,10 +57,18 @@
   display: flex;
   flex-direction: column;
   text-align: left;
+  align-items: center;
 }
 
-.button {
-  background-color: black;
+.text-input-flex div {
+  text-align: left;
+  width: 370px;          /* match the input width */
+  font-weight: bold;     /* make it bold if not already */
+  margin-left: 2.1rem;
+}
+
+.button-next-button {
+  background-color: #003B5C;
   color: white;
   border-radius: 5px;
   height: 35px;
@@ -68,6 +76,14 @@
   font-size: 1rem;
   cursor: pointer;
   margin-top: 2rem;
+  align-items: center;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.1rem;
 }
 
 .textbox {
@@ -96,4 +112,47 @@
   max-width: 600px;
   width: 90%;
   margin-top: 2rem;
+  margin-left: -60px;
+}
+
+.names-flex div,
+.select-text-flex div {
+  text-align: left;
+  width: 200px; /* match the textbox width */
+  font-weight: bold;
+}
+
+.text-input-flex div {
+  text-align: left;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .create-user-page {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .welcome-side,
+  .form-side {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .create-user-card {
+    margin-left: 0;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .textbox-long {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .text-input-flex div {
+    width: 100%;
+    margin-left: 0;
+  }
 }
