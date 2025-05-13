@@ -120,9 +120,10 @@ function SelectInterests() {
       </div>
       <button type = "button"
         className = "to-finish"
-        onClick = {() => navigate("/setup-complete")}>
-          Finish    &gt;
-      </button>
+        onClick = {() => navigate("/setup-complete")}>Finish ⟶</button>
+      <button type = "button"
+        className = "revert-back"
+        onClick = {() => navigate("/setup-complete")}>⟵ Back</button>
     </>
   );
 }
