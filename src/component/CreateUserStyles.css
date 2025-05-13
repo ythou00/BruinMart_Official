@@ -108,3 +108,37 @@
     width: 200px;
     border-radius: 5px;
 }
+
+.image-position {
+    position: relative;
+    height: 200x;
+    width: 200px;
+
+    bottom: 200px;
+    left: 267px;
+}
+
+.image-circle {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: calc(infinity * 1px);
+
+    bottom: 200px;
+    left: 267px;
+}
+
+.edit-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    border: none !important;
+    cursor: pointer;
+
+    bottom: 255px;
+    left: 400px;
+}

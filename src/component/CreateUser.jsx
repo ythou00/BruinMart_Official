@@ -1,10 +1,25 @@
+import {useState, useRef} from 'react'
 import { useNavigate } from 'react-router-dom'
+import DefaultImage from "../assets/upload-image.png"
+import EditIcon from "../assets/edit.svg"
 import './CreateUserStyles.css'
 
 function CreateUser() {
-  const handleSubmit = (event) => {};
-
   const navigate = useNavigate();
+
+  const [avatarURL, setAvatarURL] = useState(DefaultImage);
+  const fileUploadRef = useRef();
+
+  const handleImageUpload = (event) => {
+    event.preventDefault();
+    fileUploadRef.current.click();
+  }
+
+  const uploadImageDisplay = () => {
+    const uploadedFile = fileUploadRef.current.files[0];
+    const cachedURL = URL.createObjectURL(uploadedFile);
+    setAvatarURL(cachedURL);
+  }
 
     return (
       <>
@@ -69,6 +84,31 @@ function CreateUser() {
             Next    &gt;
         </button>
         
+        <div classname = "image-position">
+          <img
+            src = {avatarURL}
+            alt = "Avatar"
+            className = "image-circle rounded-full" />
+        </div>
+
+        <form id = "form" encType = 'multipart/form-data'>
+          <button
+            type = 'submit'
+            onClick = {handleImageUpload}
+            className = 'edit-icon'
+            >
+            <img
+              src = {EditIcon}
+              alt = "Edit"
+              className = 'object-cover' />
+          </button>
+          <input
+            type = "file"
+            id = "file"
+            ref = {fileUploadRef}
+            onChange = {uploadImageDisplay}
+            hidden />
+        </form>
       </>
     );
    }
