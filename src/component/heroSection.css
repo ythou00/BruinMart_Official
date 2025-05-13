@@ -15,7 +15,7 @@
 .shop-button {
     display: inline-block;            /* Ensures padding & background apply correctly */
     padding: 0.8rem 1.5rem;
-    background-color: #FFB81C;
+    background-color: #e6a61b;
     color: white;
     font-size: 1.3rem;                /* Increase font size */
     font-weight: bold;
@@ -46,7 +46,7 @@
 }
 
 .hero-text h2 {
-    color: #ecb160;
+    color: #FFB81C;
     font-size: 2rem;
     margin-bottom: 0.5rem;
   }
