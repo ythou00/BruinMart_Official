@@ -60,13 +60,6 @@ function SelectInterests() {
       <div className = "interest">Interests</div>
       <div className = "interest-caption">Please select some interests</div>
 
-
-      <button type = "button"
-        className = "to-finish"
-        onClick = {() => navigate("/FinishUser")}>
-          Finish    &gt;
-      </button>
-
       <div className = "button-container">
         <div className = "container1">
           <button onClick = {markIsClicked} 
@@ -125,6 +118,12 @@ function SelectInterests() {
           </button>
         </div>
       </div>
+      <button type = "button"
+        className = "to-finish"
+        onClick = {() => navigate("/setup-complete")}>Finish ⟶</button>
+      <button type = "button"
+        className = "revert-back"
+        onClick = {() => navigate("/create-user")}>⟵ Back</button>
     </>
   );
 }
