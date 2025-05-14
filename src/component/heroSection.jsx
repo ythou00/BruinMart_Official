@@ -12,7 +12,7 @@ export default function HeroSection() {
       <div className="hero-text">
         <h2>Welcome to BruinMart</h2>
         <h1>A 24 Hour<br />Student Furniture Marketplace</h1>
-        <Link to="/SearchPage" className="shop-button">Shop Now ⟶</Link>
+        <Link to="/marketplace" className="shop-button">Shop Now ⟶</Link>
       </div>
       <div className="image-credit">
         Image Credit:{' '}

@@ -23,7 +23,7 @@
 
 .sell-guide-step {
   margin-bottom: 2.5rem;
-  border-left: 4px solid #000000;
+  border-left: 4px solid #003b5c;
   padding-left: 1rem;
 }
 
@@ -65,5 +65,5 @@
   font-size: 1.5rem;
   margin-left: 0.2rem;
   margin-top: 0.7rem; /* vertical adjustment */
-  color: #f4a72c;
+  color: #ffb81c;
 }

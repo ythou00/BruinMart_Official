@@ -1,87 +1,82 @@
+/* Centered title styling */
 .interest {
-    position: relative;
-    top: 50px;
-    text-align: center;
-    font-size: 3em;
-    font-weight: bold;
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  margin-top: 3rem;
 }
 
 .interest-caption {
-    position: relative;
-    top: 50px;
-    text-align: center;
+  text-align: center;
+  margin-top: 0.5rem;
 }
 
-.to-finish{
-    background-color: black;
-    color: white;
-    position: relative;
-    cursor: pointer;
-
-    width: 150px;
-    top: 450px;
-    left: 665px;
-    font-size: 1.2rem;
-    border-radius: 5px;
+/* Finish button, centered and responsive */
+.to-finish {
+  display: block;
+  background-color: #003B5C;
+  color: white;
+  cursor: pointer;
+  width: 160px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  margin: 4rem auto 2rem auto; /* Centered below button grid */
+  padding: 0.5rem 1rem;
 }
 
+/* back button */
+.revert-back {
+  display: block;
+  background-color: #003B5C;
+  color: white;
+  cursor: pointer;
+  width: 160px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  margin: 2rem auto 2rem auto; /* Centered below button grid */
+  padding: 0.5rem 1rem;
+}
+
+/* Layout of all buttons */
 .button-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    top: 125px;
-    gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
-.container1 {
-    position: relative;
-    display: flex;
-
-    gap: 30px;
-}
-
-.container2 {
-    position: relative;
-    display: flex;
-
-    gap: 30px;
-}
-
+/* Shared row styling for each button group */
+.container1,
+.container2,
 .container3 {
-    position: relative;
-    display: flex;
-
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 900px;
 }
 
+/* Button styles */
 .interest-button {
-    position: relative;
-    height: 35px;
-
-    font-size: 1rem;
-    border-radius: 5px;
+  min-width: 150px;
+  max-width: 200px;
+  padding: 0.6rem 1rem;
+  height: auto;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
 }
 
-.one {
-    width: 175px;
-}
-
-.two {
-    width: 120px;
-}
-
-.three {
-    width: 175px;
-}
-
+/* Remove old .one/.two/.three classes */
 .not-looking-for {
-    background-color: black;
-    color: white;
+  background-color: #003B5C;
+  color: white;
 }
 
 .looking-for {
-    background-color: #f4a72c;
-    color: black;
+  background-color: #ffb81c;
+  color: black;
 }

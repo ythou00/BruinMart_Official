@@ -1,110 +1,230 @@
+.create-user-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  gap: 4rem;
+  background-color: #f9f9f9;
+}
+
+.welcome-side {
+  flex: 1;
+  text-align: center;
+  padding: 2rem;
+}
+
 .new-user {
-    position: relative;
-    top: 75px;
-    left: 120px;
-    
-    font-size: 3rem;
-    font-weight: bold;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .new-subtext {
-    position: relative;
-    top: 80px;
-    left: 250px;
+  font-size: 1.2rem;
+  color: #444;
+  text-align: center;
 }
 
-.names-flex {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    top: 30px;
-    left: 802px;
-    gap: 192px;
-    text-align: left;
+/* Optional: shrink card on small screen */
+.form-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
-.names-text-flex {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    top: 30px;
-    left: 800px;
-    gap: 70px;
-}
-
+.names-flex,
+.names-text-flex,
+.select-text-flex,
 .select-flex {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    top: 60px;
-    left: 800px;
-    gap: 70px;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
-.select-text-flex {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    top: 60px;
-    left: 802px;
-    gap: 210px;
+.text-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
-.text-input-flex{
-    display: flex;
-    flex-direction: column;
-    position: relative;
+.text-input-flex {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
 }
 
-.text-flex{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 90px;
-    left: 800px;
-    gap: 30px;
-    text-align: left;
+.text-input-flex div {
+  text-align: left;
+  width: 370px;          /* match the input width */
+  font-weight: bold;     /* make it bold if not already */
+  margin-left: 2.1rem;
 }
 
-.button {
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    position: relative;
-    cursor: pointer;
-
-    border-radius: 5px;
-    height: 35px;
-    width: 150px;
+.button-next-button {
+  background-color: #003B5C;
+  color: white;
+  border-radius: 5px;
+  height: 35px;
+  width: 150px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  align-items: center;
+  text-align: center;
 }
 
-.next-button {
-    top: 180px;
-    left: 967px;
-}
-
-.upload-button {
-    top: 0px;
-    right: 400px;
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.1rem;
 }
 
 .textbox {
-    position: relative;  
-    height: 30px;
-    width: 200px;
-    border-radius: 5px;
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
 }
 
 .textbox-long {
-    position: relative;
-    height: 30px;
-    width: 470px;
-    border-radius: 5px;
+  height: 30px;
+  width: 470px;
+  border-radius: 5px;
 }
 
 .selectbox {
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.create-user-card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0px 10px 8px #999;
+  padding: 2rem 3rem;
+  max-width: 600px;
+  width: 90%;
+  margin-top: 2rem;
+  margin-left: -60px;
+}
+
+.names-flex div,
+.select-text-flex div {
+  text-align: left;
+  width: 200px; /* match the textbox width */
+  font-weight: bold;
+}
+
+.text-input-flex div {
+  text-align: left;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .create-user-page {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .welcome-side,
+  .form-side {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .create-user-card {
+    margin-left: 0;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .textbox-long {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .text-input-flex div {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* 
+.image-position {
     position: relative;
-    height: 30px;
+    height: 200x;
     width: 200px;
-    border-radius: 5px;
+
+    bottom: 200px;
+    left: 267px;
+}
+
+.image-circle {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: calc(infinity * 1px);
+
+    bottom: 200px;
+    left: 267px;
+}
+
+.edit-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    border: none !important;
+    cursor: pointer;
+
+    bottom: 255px;
+    left: 400px;
+} */
+ .avatar-upload-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.welcome-side .avatar-wrapper {
+  margin-top: 2rem;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.edit-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  padding: 5px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }

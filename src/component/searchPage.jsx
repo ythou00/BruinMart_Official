@@ -33,15 +33,14 @@ export default function SearchPage() {
 
   return (
     <div style={{ backgroundColor: 'white', minHeight: '100vh', color: 'black' }}>
-      <h1 style={{ marginBottom: '100px', textAlign: 'center', marginLeft: '10px' }}>Popular Collection</h1>
+      <h1 className="search-title">Popular Collection</h1>
 
       {/* Dropdown Filters */}
-      <div style={{ display: 'flex', gap: '20px', marginBottom: '40px', marginLeft: '1100px' }}>
+      <div className="filters">
         <div>
-          <label htmlFor="type" style={{ fontSize: '16px', marginRight: '10px' }}>Type:</label>
+          <label htmlFor="type">Type:</label>
           <select
             id="type"
-            style={{ padding: '10px', fontSize: '14px' }}
             value={selectedType}
             onChange={(e) => setSelectedType(e.target.value)}
           >
@@ -54,10 +53,9 @@ export default function SearchPage() {
         </div>
 
         <div>
-          <label htmlFor="price" style={{ fontSize: '16px', marginRight: '10px' }}>Price:</label>
+          <label htmlFor="price">Price:</label>
           <select
             id="price"
-            style={{ padding: '10px', fontSize: '14px' }}
             value={selectedPrice}
             onChange={(e) => setSelectedPrice(e.target.value)}
           >
@@ -88,7 +86,7 @@ export default function SearchPage() {
           />
         ))}
       </div>
-
+      <div className="space-holder"></div>
       <Footer />
     </div>
   );
