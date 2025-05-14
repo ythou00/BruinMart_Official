@@ -1,4 +1,5 @@
 .create-user-page {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -6,13 +7,35 @@
   min-height: 100vh;
   padding: 2rem;
   gap: 4rem;
-  background-color: #f9f9f9;
+  
+  /* Background image */
+  background-image: url('../assets/weyburn-overview.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.create-user-page::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(1.5px); /* blur effect */
+  background: rgba(255, 255, 255, 0.6); /* white overlay tint */
+  z-index: 0;
 }
 
 .welcome-side {
   flex: 1;
   text-align: center;
   padding: 2rem;
+}
+
+.welcome-side,
+.form-side {
+  position: relative;
+  z-index: 1;
 }
 
 .new-user {
@@ -23,9 +46,13 @@
 }
 
 .new-subtext {
-  font-size: 1.2rem;
-  color: #444;
+  font-size: 1.3rem;
+  color: #222;
   text-align: center;
+}
+
+.new-user, .new-subtext {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
 /* Optional: shrink card on small screen */
@@ -157,40 +184,6 @@
   }
 }
 
-/* 
-.image-position {
-    position: relative;
-    height: 200x;
-    width: 200px;
-
-    bottom: 200px;
-    left: 267px;
-}
-
-.image-circle {
-    position: relative;
-    height: 200px;
-    width: 200px;
-    border-radius: calc(infinity * 1px);
-
-    bottom: 200px;
-    left: 267px;
-}
-
-.edit-icon {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    width: 40px;
-    background: transparent;
-    border: none !important;
-    cursor: pointer;
-
-    bottom: 255px;
-    left: 400px;
-} */
  .avatar-upload-container {
   display: flex;
   justify-content: center;
@@ -227,4 +220,27 @@
   cursor: pointer;
   padding: 5px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.image-credit-createUser {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 0.8rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2px 6px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.image-credit-createUser a {
+  color: white;
+  text-decoration: none;
+}
+
+.image-credit-createUser a:hover,
+.image-credit-createUser a:focus {
+  text-decoration: underline;
+  outline: none;
 }
