@@ -123,7 +123,7 @@ function SelectInterests() {
         onClick = {() => navigate("/setup-complete")}>Finish ⟶</button>
       <button type = "button"
         className = "revert-back"
-        onClick = {() => navigate("/setup-complete")}>⟵ Back</button>
+        onClick = {() => navigate("/create-user")}>⟵ Back</button>
     </>
   );
 }
