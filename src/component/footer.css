@@ -59,7 +59,7 @@ background: none;
 .footer-logo {
   width: 32px;
   height: 32px;
-  border-radius: 50%;
+  border-radius: 10%;
 }
 
 .footer-right {

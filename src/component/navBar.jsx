@@ -4,7 +4,7 @@ import SearchBar from "./searchBar"
 import SearchData from './data.json'
 import { VscAccount } from "react-icons/vsc";
 import { Link, useMatch, useResolvedPath } from 'react-router-dom'
-import logoImage from '../assets/logo-bm.png'
+import logoImage from '../assets/logo-bm-4.png.jpg'
 
 
 export default function NavBar() {
