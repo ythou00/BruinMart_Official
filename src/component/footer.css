@@ -1,5 +1,5 @@
 .end-hero-section {
-  background-color: rgb(0, 0, 0);
+  background-color: #003b5c;
   padding: 1rem 2rem;
   border-top: 1px solid #ccc;
 }
@@ -32,7 +32,7 @@
 }
 
 .footer-link {
-color: #f4a72c;
+color: #ffb81c;
 text-decoration: none;
 font-weight: 500;
 background: none;         /* ← removes highlight */
@@ -59,7 +59,7 @@ background: none;
 .footer-logo {
   width: 32px;
   height: 32px;
-  border-radius: 50%;
+  border-radius: 10%;
 }
 
 .footer-right {
@@ -80,7 +80,7 @@ background: none;
 }
 
 .subscribe-button {
-  background-color: #f4a72c;
+  background-color: #ffb81c;
   color: rgb(0, 0, 0);
   padding: 0.5rem 1rem;
   border-radius: 6px;

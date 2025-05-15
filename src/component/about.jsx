@@ -3,6 +3,7 @@ import MemberCard from './memberCard';
 import './about.css';
 import moveInImage from '../assets/bruin-move-in.jpg'
 import memberImage1 from '../assets/ythou.jpg'
+import memberImage2 from '../assets/heidi-image.jpg'
 import Footer from './footer'
 
 
@@ -56,7 +57,7 @@ export default function About() {
             <MemberCard
                 name="Heidi Yu"
                 role="CTO"
-                imgSrc={moveInImage}
+                imgSrc={memberImage2}
                 description="Developed the front-end of the message center in React, designing the user interface that enables buyers and sellers to communicate. 
                 She integrated the messaging page into the website's navigation and ensured a responsive, user-friendly layout aligned with the overall marketplace design."
             />
