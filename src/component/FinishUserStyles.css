@@ -1,3 +1,31 @@
+.finish-user-page {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('../assets/westwood.jpg'); /* replace with your actual image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Add white tint + blur */
+.finish-user-page::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 0;
+}
+
+/* Make sure content floats above the background/overlay */
+.finish-user-page > .centered-container {
+  position: relative;
+  z-index: 1;
+}
+
 .congrats {
   font-size: 3em;
   font-weight: bold;
@@ -14,13 +42,51 @@
   margin-bottom: 1.5rem;
 }
 
+.congrats,
+.caption
+.bear {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
 .done{
     width: 150px;
     height: 40px;
     margin-top: 2rem;
-    background-color: black;
+    background-color: #003B5C;
     color: white;
     cursor: pointer;
     font-size: 1.2rem;
     border-radius: 5px;
+}
+
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.image-credit-finish {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 0.8rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2px 6px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.image-credit-finish a {
+  color: white;
+  text-decoration: none;
+}
+
+.image-credit-finish a:hover,
+.image-credit-finish a:focus {
+  text-decoration: underline;
+  outline: none;
 }

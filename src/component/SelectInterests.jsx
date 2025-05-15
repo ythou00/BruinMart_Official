@@ -56,7 +56,7 @@ function SelectInterests() {
   }
 
   return (
-    <>
+    <div className="select-interests-page">
       <div className = "interest">Interests</div>
       <div className = "interest-caption">Please select some interests</div>
 
@@ -124,7 +124,18 @@ function SelectInterests() {
       <button type = "button"
         className = "revert-back"
         onClick = {() => navigate("/create-user")}>⟵ Back</button>
-    </>
+
+      <div className="image-credit-selectInterest">
+          Image Credit:{' '}
+          <a
+            href="https://studios.com/ucla-weyburn-terrace-paseo-and-commons-apartments.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Studios
+          </a>
+      </div>  
+    </div>
   );
 }
    

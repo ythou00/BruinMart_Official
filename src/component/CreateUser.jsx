@@ -115,6 +115,16 @@ function CreateUser() {
             </div>
           </div>
         </div>
+        <div className="image-credit-createUser">
+          Image Credit:{' '}
+          <a
+            href="https://studios.com/ucla-weyburn-terrace-paseo-and-commons-apartments.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Studios
+          </a>
+        </div>
       </div>
     );
 
