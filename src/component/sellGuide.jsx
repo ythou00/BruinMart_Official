@@ -41,7 +41,7 @@ export default function SellGuide() {
             <PiSealCheckFill className="help-icon"/>
           </div>
           <p>
-            New users must complete their profile before posting items. Choose what you’re interested in buying, 
+            New users must complete their profile before posting items. Choose what you’re interested in buying 
             and fill out a few preferences like meeting location and item categories.
           </p>
         </div>
