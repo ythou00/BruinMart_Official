@@ -4,6 +4,8 @@ import './about.css';
 import moveInImage from '../assets/bruin-move-in.jpg'
 import memberImage1 from '../assets/ythou.jpg'
 import memberImage2 from '../assets/heidi-image.jpg'
+import memberImage3 from '../assets/isaac-image.png'
+import memberImage4 from '../assets/paul-image.jpg'
 import Footer from './footer'
 
 
@@ -63,13 +65,13 @@ export default function About() {
             <MemberCard
                 name="Paul Kang"
                 role="Chief DEIB & Workforce Advisor"
-                imgSrc={moveInImage}
+                imgSrc={memberImage4}
                 description="Paul guides us on inclusive practices and workforce development."
             />
             <MemberCard
                 name="Isaac Lee"
                 role="Chief DEIB & Workforce Advisor"
-                imgSrc={moveInImage}
+                imgSrc={memberImage3}
                 description="Isaac guides us on inclusive practices and workforce development."
             />
         </div>
