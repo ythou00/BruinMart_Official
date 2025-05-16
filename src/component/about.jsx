@@ -4,6 +4,8 @@ import './about.css';
 import moveInImage from '../assets/bruin-move-in.jpg'
 import memberImage1 from '../assets/ythou.jpg'
 import memberImage2 from '../assets/heidi-image.jpg'
+import memberImage3 from '../assets/isaac-image.png'
+import memberImage4 from '../assets/paul-image.jpg'
 import Footer from './footer'
 
 
@@ -50,27 +52,30 @@ export default function About() {
             <h1 className="team-title">Our Team</h1>
             <MemberCard
                 name="Yu-Ting Hou"
-                role="CTO"
+                role="Frontend & Technical Lead / Project Coordinator"
                 imgSrc={memberImage1}
-                description="YT leads the company with a vision of innovation and community-driven solutions."
+                description="Built the website’s core layout and interactive UI components, including the Home and User Guide pages, navigation bar, and footer. 
+                Focused on creating a cohesive and responsive user interface that ensured consistency across all pages.
+                Acted as the team’s technical lead, guiding implementation, fixing bugs, and supporting others throughout development."
             />
             <MemberCard
                 name="Heidi Yu"
-                role="CTO"
+                role="Frontend Developer / Editor"
                 imgSrc={memberImage2}
                 description="Developed the front-end of the message center in React, designing the user interface that enables buyers and sellers to communicate. 
-                She integrated the messaging page into the website's navigation and ensured a responsive, user-friendly layout aligned with the overall marketplace design."
+                I integrated the messaging page into the website's navigation and ensured a responsive, user-friendly layout aligned with the overall marketplace design."
             />
             <MemberCard
                 name="Paul Kang"
-                role="Chief DEIB & Workforce Advisor"
-                imgSrc={moveInImage}
-                description="Paul guides us on inclusive practices and workforce development."
+                role="Frontend Developer / UI/UX Designer"
+                imgSrc={memberImage4}
+                description="Designed and built the Search Page for BruinMart, allowing users to filter and explore listings based on type and price. 
+                I focused on creating a clean, user-friendly interface that makes it easy to browse items efficiently."
             />
             <MemberCard
                 name="Isaac Lee"
-                role="Chief DEIB & Workforce Advisor"
-                imgSrc={moveInImage}
+                role="Frontend Developer – Authentication & User Setup"
+                imgSrc={memberImage3}
                 description="Isaac guides us on inclusive practices and workforce development."
             />
         </div>

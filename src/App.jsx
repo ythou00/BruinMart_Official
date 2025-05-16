@@ -13,6 +13,7 @@ import AboutPage from './component/about.jsx'
 import CreateUser from './component/CreateUser.jsx'
 import SelectInterests from './component/SelectInterests.jsx'
 import FinishUser from './component/FinishUser.jsx'
+import ProfilePage from './component/profile.jsx'
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path = "/create-user" element = {<CreateUser/>}/>
           <Route path = "/user-setup" element = {<SelectInterests/>}/>
           <Route path = "/setup-complete" element = {<FinishUser/>}/>
+          <Route path="/profile" element={<ProfilePage />} />
         </Routes>
       </div>
     </>
