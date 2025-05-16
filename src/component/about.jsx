@@ -54,7 +54,7 @@ export default function About() {
                 name="Yu-Ting Hou"
                 role="Frontend & Technical Lead / Project Coordinator"
                 imgSrc={memberImage1}
-                description="Built the website’s core layout and interactive UI components, including the Home and Sell Guide pages, navigation bar, and footer. 
+                description="Built the website’s core layout and interactive UI components, including the Home and User Guide pages, navigation bar, and footer. 
                 Focused on creating a cohesive and responsive user interface that ensured consistency across all pages.
                 Acted as the team’s technical lead, guiding implementation, fixing bugs, and supporting others throughout development."
             />
