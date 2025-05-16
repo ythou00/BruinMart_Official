@@ -35,7 +35,9 @@ body {
 .center {
     flex: 1.3;
     display: flex;
+    left: 50%;
     justify-content: left;
+    align-items: center;
 }
 
 .site-title {

@@ -47,7 +47,8 @@ export default function NavBar() {
             {user ? (
                 <>
                     <Link to="/profile" className="login-link">
-                    <span className="login-text">👤 {user.username}</span>
+                    <VscAccount className="login-icon"/>
+                    <span className="login-text">{user.username}</span>
                     </Link>
                 </>
             ) : (
