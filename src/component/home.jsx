@@ -17,10 +17,10 @@ export default function Home() {
       <section className="our-statement">
         <h1>What We Do</h1>
         <p>
-          <strong>Our Focus:</strong> Create a safe, efficient, and community-driven platform for UCLA students to make transactions conveniently. 
-          We also want to promote affordability for students looking for budget-friendly options, streamline secure transactions, 
-          verify profiles, and ensure campus-based exchange options. The marketplace should ultimately be the go-to place for all 
-          student-to-student exchanges, making buying and selling trustworthy and seamless.
+          <strong>Our Focus:</strong> To create a safe, efficient, and community-driven marketplace platform for UCLA students. 
+          We prioritize safety, affordability, and convenience, making it easier for students to buy and sell items with confidence.
+          Our platform streamlines secure transactions, verifies every user, and promotes campus-based exchanges, so you never have to worry about scams or unreliable sellers.  
+          We aim to be the go-to place for all student-to-student exchanges, making transactions trustworthy, budget-friendly, and seamless.
         </p>
       </section>
 

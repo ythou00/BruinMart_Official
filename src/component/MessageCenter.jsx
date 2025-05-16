@@ -48,7 +48,7 @@ const MessageCenter = () => {
         {!selectedThread ? (
           <div className="dm-inbox">
             <div className="dm-header">
-              <h2>janedoe</h2>
+              <h2>Messages</h2>
             </div>
 
             <div className="dm-search">

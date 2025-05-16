@@ -17,18 +17,18 @@ export default function About() {
                 <div className="purpose-text">
                     <h2>Our Purpose</h2>
                     <p>
-                    BruinMart was created by Bruins, for Bruins — to make buying and selling within the UCLA
-                    community safe, seamless, and scam-free.
+                    BruinMart was built by UCLA students, for UCLA students to simplify buying and selling within 
+                    our community while keeping it secure and reliable.
                     </p>
                     <p>
-                    As students ourselves, we saw firsthand how difficult it was to find affordable, trustworthy
-                    items without resorting to risky public platforms. From overpriced furniture to sketchy
-                    meetups, the experience was far from ideal.
+                    As students, we know how difficult it can be to find affordable furniture, textbooks, or
+                    everyday essentials, especially with the presence of untrustworthy sellers and inflated prices. 
+                    Public platforms often feel risky, leaving you guessing about who’s on the other side of a transaction.
                     </p>
                     <p>
-                    That’s why we built BruinMart: a platform exclusively for UCLA students and alumni, where
-                    every profile is verified, every transaction is designed for safety, and every exchange
-                    happens with confidence.
+                    That’s why we created BruinMart: a platform exclusively for UCLA students and alumni, where
+                    every user is verified,  every transaction is protected, and every exchange is designed to give you peace of mind. 
+                    No scams, no sketchy meetups—just Bruins helping Bruins.
                     </p>
                 </div>
                 <div className="image-wrapper">
@@ -60,7 +60,8 @@ export default function About() {
                 name="Heidi Yu"
                 role="CTO"
                 imgSrc={memberImage2}
-                description="Heidi architects our technology and ensures smooth, scalable systems."
+                description="Developed the front-end of the message center in React, designing the user interface that enables buyers and sellers to communicate. 
+                She integrated the messaging page into the website's navigation and ensured a responsive, user-friendly layout aligned with the overall marketplace design."
             />
             <MemberCard
                 name="Paul Kang"
