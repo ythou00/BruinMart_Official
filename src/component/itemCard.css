@@ -35,3 +35,14 @@
 .card-btn:hover{
     background-color: #8BB8E8;
 }
+
+.card-detail {
+  margin: 0.5rem 5%;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  padding-left: 1.2rem;
+}
+
+.card-detail li {
+  margin-bottom: 0.25rem;
+}

@@ -80,7 +80,12 @@ export default function SearchPage() {
             imgSrc={item.image}
             imgAlt={item.label}
             title={item.label}
-            detail={`Price: ${item.price} | Type: ${item.type}`}
+            // detail={`Price: ${item.price} | Type: ${item.type}`}
+            detail={[
+              `Price: ${item.price}`,
+              `Type: ${item.type}`,
+              `Category: ${item.type === "Furniture" ? "Essentials" : "Misc"}`,
+            ]}
             buttonText="Learn More"
             link="/sell-guide"
           />

@@ -27,11 +27,16 @@ export default function Home() {
       <section className="popular-collection">
         <h2>Popular Collection</h2>
         <div className="card-grid">
-          <ItemCard 
+          <ItemCard
             imgSrc={deskClockImage}
             imgAlt="Card Image"
             title="Desk Clock"
-            detail="good for daily use"
+            // detail="good for daily use"
+            detail={[
+              "Affordable desk clock",
+              "Easy to set up",
+              "Perfect for dorms"
+            ]}
             buttonText="Learn More"
             link="/sell-guide"
           />
@@ -40,7 +45,12 @@ export default function Home() {
             imgSrc={deskshelfImage}
             imgAlt="Card Image"
             title="Desk Shelf"
-            detail="good for daily use"
+            // detail="good for daily use"
+            detail={[
+              "Affordable desk clock",
+              "Easy to set up",
+              "Perfect for dorms"
+            ]}
             buttonText="Learn More"
             link="/sell-guide"
           />
@@ -49,7 +59,12 @@ export default function Home() {
             imgSrc={studyDeskImage}
             imgAlt="Card Image"
             title="Study Desk"
-            detail="good for daily use"
+            // detail="good for daily use"
+            detail={[
+              "Affordable desk clock",
+              "Easy to set up",
+              "Perfect for dorms"
+            ]}
             buttonText="Learn More"
             link="/sell-guide"
           />
