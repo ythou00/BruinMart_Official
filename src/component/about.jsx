@@ -74,9 +74,10 @@ export default function About() {
             />
             <MemberCard
                 name="Isaac Lee"
-                role="Frontend Developer – Authentication & User Setup"
+                role="Frontend and Backend Developer"
                 imgSrc={memberImage3}
-                description="Isaac guides us on inclusive practices and workforce development."
+                description="Developed the login and sign up GUI for BruinMart that allows users to create and log into accounts. 
+                Also responsible for the current development of BruinMart's backend."
             />
         </div>
         <Footer />

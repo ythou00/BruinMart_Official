@@ -5,7 +5,7 @@ import ItemCard from "./itemCard";
 import deskClockImage from '../assets/deskclock.jpg';
 import deskshelfImage from '../assets/deskshelf.jpg';
 import studyDeskImage from '../assets/studydesk.jpg';
-import teenTitansImage from '../assets/teen_titans.jpg';
+import teamImage from '../assets/team.jpg';
 import logoImage from '../assets/logo.png';
 import Footer from './footer';
 
@@ -68,7 +68,7 @@ export default function Home() {
       </section>
       <section className="about-section">
         <div className="about-card">
-          <img src={teenTitansImage} alt="About us" className="about-image" />
+          <img src={teamImage} alt="About us" className="about-image" />
           <div className="about-text">
             <div className="about-text-inner">
               <h2>Move Out. Cash In. Move In. Save Big.</h2>
