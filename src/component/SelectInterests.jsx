@@ -57,6 +57,10 @@ function SelectInterests() {
 
   return (
     <div className="select-interests-page">
+      <button type = "button"
+        className = "revert-back"
+        onClick = {() => navigate("/create-user")}>⟵ Back
+      </button>
       <div className = "interest">Interests</div>
       <div className = "interest-caption">Please select some interests</div>
 
@@ -121,9 +125,6 @@ function SelectInterests() {
       <button type = "button"
         className = "to-finish"
         onClick = {() => navigate("/setup-complete")}>Finish ⟶</button>
-      <button type = "button"
-        className = "revert-back"
-        onClick = {() => navigate("/create-user")}>⟵ Back</button>
 
       <div className="image-credit-selectInterest">
           Image Credit:{' '}
