@@ -67,8 +67,8 @@
 .about-image {
   position: relative;
   /* left: -150px; */
-  width: 50%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 800px;
   height: 400px;
   border-radius: 10px;
   margin-right: 2rem;
