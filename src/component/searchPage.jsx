@@ -7,22 +7,6 @@ export default function SearchPage() {
   const [selectedPrice, setSelectedPrice] = useState('');
   const [expandedIndex, setExpandedIndex] = useState(null);
 
-  // Reusable button styles
-  const buttonStyle = {
-    backgroundColor: '#007bff',
-    color: 'white',
-    border: 'none',
-    borderRadius: '12px',
-    padding: '12px 24px',
-    fontSize: '16px',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s',
-  };
-
-  const buttonHoverStyle = {
-    backgroundColor: '#0056b3',
-  };
-
   const items = [
     { label: "Bookshelf", price: "$10", type: "Furniture", image: "https://m.media-amazon.com/images/I/71pr1F0VWRL._AC_UF894,1000_QL80_.jpg", description: "A sturdy wooden bookshelf.", seller: "Alice" },
     { label: "Couch", price: "$15", type: "Furniture", image: "https://images.thdstatic.com/productImages/5bace440-6176-4d76-bc79-9bc3ccc00aaa/svn/brown-magic-home-sofas-couches-cs-b01152169-64_1000.jpg", description: "Comfortable brown couch.", seller: "Bob" },
@@ -51,43 +35,18 @@ export default function SearchPage() {
     const item = filteredItems[expandedIndex];
 
     return (
-      <div style={{ backgroundColor: 'white', minHeight: '100vh', color: 'black', padding: 20 }}>
+      <div className="expanded-view">
         <h1 className="search-title">{item.label}</h1>
-        <div className="expanded-item" style={{
-          maxWidth: 600,
-          margin: '0 auto',
-          border: '1px solid #ccc',
-          padding: 20,
-          borderRadius: 8,
-          boxShadow: '0 0 10px rgba(0,0,0,0.1)',
-          backgroundColor: 'white',
-        }}>
-          <img
-            src={item.image}
-            alt={item.label}
-            style={{ width: '100%', height: 'auto', marginBottom: 15, objectFit: 'cover' }}
-          />
+        <div className="expanded-item">
+          <img src={item.image} alt={item.label} />
           <p><strong>Price:</strong> {item.price}</p>
           <p><strong>Type:</strong> {item.type}</p>
           <p><strong>Description:</strong> {item.description}</p>
           <p><strong>Seller:</strong> {item.seller}</p>
-          <button
-            onClick={() => alert(`You contacted ${item.seller}! (Placeholder)`)}
-            style={buttonStyle}
-            onMouseEnter={e => e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor}
-            onMouseLeave={e => e.currentTarget.style.backgroundColor = buttonStyle.backgroundColor}
-          >
+          <button onClick={() => alert(`You contacted ${item.seller}! (Placeholder)`)} className="primary-button">
             Contact Seller
           </button>
-          <button
-            onClick={() => setExpandedIndex(null)}
-            style={{ ...buttonStyle, backgroundColor: '#ccc', color: 'black' }}
-            onMouseEnter={e => e.currentTarget.style.backgroundColor = '#999'}
-            onMouseLeave={e => {
-              e.currentTarget.style.backgroundColor = '#ccc';
-              e.currentTarget.style.color = 'black';
-            }}
-          >
+          <button onClick={() => setExpandedIndex(null)} className="secondary-button">
             Close
           </button>
         </div>
@@ -95,19 +54,14 @@ export default function SearchPage() {
     );
   }
 
-  // Normal grid view
   return (
-    <div style={{ backgroundColor: 'white', minHeight: '100vh', color: 'black', padding: 20 }}>
+    <div className="search-page">
       <h1 className="search-title">Popular Collection</h1>
 
       <div className="filters">
         <div>
           <label htmlFor="type">Type:</label>
-          <select
-            id="type"
-            value={selectedType}
-            onChange={(e) => setSelectedType(e.target.value)}
-          >
+          <select id="type" value={selectedType} onChange={(e) => setSelectedType(e.target.value)}>
             <option value="">Select Type</option>
             <option value="Furniture">Furniture</option>
             <option value="Kitchen Supplies">Kitchen Supplies</option>
@@ -118,11 +72,7 @@ export default function SearchPage() {
 
         <div>
           <label htmlFor="price">Price:</label>
-          <select
-            id="price"
-            value={selectedPrice}
-            onChange={(e) => setSelectedPrice(e.target.value)}
-          >
+          <select id="price" value={selectedPrice} onChange={(e) => setSelectedPrice(e.target.value)}>
             <option value="">Select Price</option>
             <option value="$10">$10</option>
             <option value="$15">$15</option>
@@ -137,36 +87,14 @@ export default function SearchPage() {
         </div>
       </div>
 
-      <div className="card-grid" style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
-        gap: 20,
-      }}>
+      <div className="card-grid">
         {filteredItems.map((item, index) => (
-          <div key={index} className="item-card-container" style={{
-            border: '1px solid #ccc',
-            borderRadius: 8,
-            padding: 15,
-            boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
-            backgroundColor: 'white',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}>
-            <img
-              src={item.image}
-              alt={item.label}
-              style={{ width: '100%', height: 150, objectFit: 'cover', borderRadius: 8, marginBottom: 10 }}
-            />
+          <div key={index} className="item-card-container">
+            <img src={item.image} alt={item.label} />
             <h2>{item.label}</h2>
             <p><strong>Price:</strong> {item.price}</p>
             <p><strong>Type:</strong> {item.type}</p>
-            <button
-              onClick={() => setExpandedIndex(index)}
-              style={buttonStyle}
-              onMouseEnter={e => e.currentTarget.style.backgroundColor = buttonHoverStyle.backgroundColor}
-              onMouseLeave={e => e.currentTarget.style.backgroundColor = buttonStyle.backgroundColor}
-            >
+            <button onClick={() => setExpandedIndex(index)} className="primary-button">
               Contact Seller
             </button>
           </div>
