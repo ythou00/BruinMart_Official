@@ -87,7 +87,7 @@ export default function SearchPage() {
         </div>
       </div>
 
-      <div className="card-grid">
+      <div className="card-shape">
         {filteredItems.map((item, index) => (
           <div key={index} className="item-card-container">
             <img src={item.image} alt={item.label} />
