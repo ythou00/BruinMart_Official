@@ -32,20 +32,17 @@
   border: 1px solid #ccc;
 }
 
-/* === Responsive Flex Layout === */
+/* === Responsive Grid layout using percentage widths === */
+
 .card-shape {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 1.5rem;
   padding: 0 1rem;
   justify-content: center;
+  grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
 }
 
-/* === Responsive Card Styling === */
 .item-card-container {
-  flex: 1 1 calc(20% - 1.5rem); /* ~5 cards per row minus the gap */
-  max-width: calc(20% - 1.5rem);
-  min-width: 250px;
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 20px;
@@ -56,6 +53,8 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   box-sizing: border-box;
+  width: 100%; /* Make sure cards fill their grid cell */
+  min-width: 0; /* Prevent overflow */
 }
 
 /* === Image inside Card === */
@@ -78,8 +77,23 @@
   font-size: 0.95rem;
 }
 
-/* === Buttons === */
 .primary-button {
+  background-color: #1a3552;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 14px;
+}
+
+.primary-button:hover {
+  background-color: #0056b3;
+}
+
+.secondary-button {
   background-color: #1a3552;
   color: white;
   border: none;
@@ -91,16 +105,11 @@
   margin-top: auto;
 }
 
-button:hover {
-  background-color: #0056b3;
-}
-
-button.close-button:hover {
+.secondary-button:hover {
   background-color: #999;
   color: black;
 }
 
-/* === Expanded Item View === */
 .expanded-item {
   max-width: 600px;
   margin: 0 auto;
@@ -124,6 +133,26 @@ button.close-button:hover {
 
 .button-group {
   display: flex;
-  gap: 12px;
+  gap: 12px; /* space between buttons */
   margin-top: 15px;
+ 
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 1200px) {
+  .card-shape {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .card-shape {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-shape {
+    grid-template-columns: 1fr;
+  }
 }
