@@ -33,7 +33,7 @@ export default function SearchPage() {
 
   if (expandedIndex !== null) {
     const item = filteredItems[expandedIndex];
-
+  
     return (
       <div className="expanded-view">
         <h1 className="search-title">{item.label}</h1>
@@ -43,12 +43,15 @@ export default function SearchPage() {
           <p><strong>Type:</strong> {item.type}</p>
           <p><strong>Description:</strong> {item.description}</p>
           <p><strong>Seller:</strong> {item.seller}</p>
-          <button onClick={() => alert(`You contacted ${item.seller}! (Placeholder)`)} className="primary-button">
-            Contact Seller
-          </button>
-          <button onClick={() => setExpandedIndex(null)} className="secondary-button">
-            Close
-          </button>
+  
+          <div className="button-group">
+            <button onClick={() => alert(`You contacted ${item.seller}! (Placeholder)`)} className="primary-button">
+              Contact Seller
+            </button>
+            <button onClick={() => setExpandedIndex(null)} className="secondary-button">
+              Close
+            </button>
+          </div>
         </div>
       </div>
     );
