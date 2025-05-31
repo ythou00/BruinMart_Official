@@ -1,5 +1,6 @@
 import React from 'react';
 import './home.css'
+import { Link } from 'react-router-dom';
 import HeroSection from './heroSection'; // make sure the path is correct
 import ItemCard from "./itemCard";
 import deskClockImage from '../assets/deskclock.jpg';
@@ -94,7 +95,7 @@ export default function Home() {
                 platform is built for safe, verified, on-campus exchanges that work around the student lifestyle.
               </p>
               <div className="quote-footer">
-                <a href="/about-us" className="about-button">About Us</a>
+                <Link to="/about-us" className="about-button">About Us</Link>
                 <p className="quote-mark quote-end">”</p>
               </div>
             </div>
