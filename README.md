@@ -1,13 +1,11 @@
-# React + Vite
+# Welcome to BruinMart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+BruinMart was built by UCLA students, for UCLA students, to simplify buying and selling within our community while keeping it secure and reliable.
 
-Currently, two official plugins are available:
+As students, we know how difficult it can be to find affordable furniture, textbooks, or everyday essentials, especially with the presence of untrustworthy sellers and inflated prices. Public platforms often feel risky, leaving you guessing about who’s on the other side of a transaction.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+That’s why we created BruinMart: a platform exclusively for UCLA students and alumni, where every user is verified, every transaction is protected, and every exchange is designed to give you peace of mind. No scams, no sketchy meetups—just Bruins helping Bruins.
 
-## Expanding the ESLint configuration
+## 🚀 Checkout our website
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# BruinMart_Official
+[https://bruinmart.vercel.app](https://bruinmart.vercel.app)
