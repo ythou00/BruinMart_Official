@@ -6,10 +6,6 @@ As students, we know how difficult it can be to find affordable furniture, textb
 
 That’s why we created BruinMart: a platform exclusively for UCLA students and alumni, where every user is verified, every transaction is protected, and every exchange is designed to give you peace of mind. No scams, no sketchy meetups—just Bruins helping Bruins.
 
-## 🚀 Checkout Our Website
-
-[https://bruinmart.vercel.app](https://bruinmart.vercel.app)
-
 ## 🛠️ Run Locally
 
 ```bash
