@@ -1,4 +1,4 @@
-# Welcome to BruinMart
+# Welcome to [BruinMart](https://bruinmart.vercel.app)
 
 BruinMart was built by UCLA students, for UCLA students to simplify buying and selling within our community while keeping it secure and reliable.
 
