@@ -1,44 +1,158 @@
 .search-container {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: white;
-    color: black;
-  }
-  
-  .search-title {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
-  
-  .filters {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    margin-bottom: 2rem;
-  }
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  color: black;
+}
 
-  .filters label {
-    font-size: 1.25rem;
-    margin-right: 0.5rem;
-  }
+.search-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
 
-  .filters select {
-    font-size: 1.1rem;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-  }
-  
-  .card-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-  }
+.filters {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
 
-  .space-holder {
-    margin-top: 2rem;
+.filters label {
+  font-size: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.filters select {
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+/* === Responsive Grid layout using percentage widths === */
+
+.card-shape {
+  display: grid;
+  gap: 1.5rem;
+  padding: 0 1rem;
+  justify-content: center;
+  grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
+}
+
+.item-card-container {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%; /* Make sure cards fill their grid cell */
+  min-width: 0; /* Prevent overflow */
+}
+
+/* === Image inside Card === */
+.item-card-container img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* === Text inside Card === */
+.item-card-container h2 {
+  margin: 12px 0 6px;
+  font-size: 1.1rem;
+}
+
+.item-card-container p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+.primary-button {
+  background-color: #1a3552;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 14px;
+}
+
+.primary-button:hover {
+  background-color: #0056b3;
+}
+
+.secondary-button {
+  background-color: #1a3552;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: auto;
+}
+
+.secondary-button:hover {
+  background-color: #999;
+  color: black;
+}
+
+.expanded-item {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: white;
+}
+
+.expanded-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.space-holder {
+  height: 80px;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px; /* space between buttons */
+  margin-top: 15px;
+ 
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 1200px) {
+  .card-shape {
+    grid-template-columns: repeat(4, 1fr);
   }
-  
+}
+
+@media (max-width: 900px) {
+  .card-shape {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-shape {
+    grid-template-columns: 1fr;
+  }
+}
