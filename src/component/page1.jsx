@@ -5,8 +5,8 @@ import { useNavigate, Link } from 'react-router-dom';
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider, db } from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
-
 import { loginUser } from '../utils/auth';
+
 import { useState } from 'react';
 import './page1.css';
 
@@ -55,20 +55,20 @@ export default function Home() {
                   const userSnap = await getDoc(userRef);
 
                   if (userSnap.exists()) {
-                    console.log("🔁 Returning user with profile");
+                    const userData = userSnap.data();
+                    loginUser(userData);
+                    window.dispatchEvent(new Event("storage"));
                     navigate("/home");
                   } else {
-                    console.log("🎉 New user (no Firestore profile)");
                     navigate("/create-user");
                   }
                 } else {
-                  alert("🚫 Only UCLA emails are allowed.");
+                  alert("Only UCLA accounts are allowed.");
                   await auth.signOut();
                 }
-              } catch (error) {
-                console.error("Login failed:", error);
-                alert("Login failed. Try again.");
-                alert(`Login failed: ${error.message}`); // <- add this
+              } catch (err) {
+                console.error("Login failed:", err);
+                alert("Login failed: " + err.message);
               }
             }}
           >
