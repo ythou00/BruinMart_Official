@@ -1,5 +1,11 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+
+// Firebase
+import { signInWithPopup } from "firebase/auth";
+import { auth, provider, db } from "../firebase";
+import { doc, getDoc } from "firebase/firestore";
+
 import { loginUser } from '../utils/auth';
 import { useState } from 'react';
 import './page1.css';
@@ -17,7 +23,7 @@ export default function Home() {
           <h1 className="welcome">Welcome!</h1>
           <h3 className="welcome-subtext">"Helping Students Make Moves"</h3>
 
-          <div className="enter-input-flex">
+          {/* <div className="enter-input-flex">
             <label htmlFor="Username" className="label">Username</label>
             <input
               type="text"
@@ -25,9 +31,9 @@ export default function Home() {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
-          </div>
+          </div> */}
 
-          <div className="enter-input-flex">
+          {/* <div className="enter-input-flex">
             <label htmlFor="Password" className="label">Password</label>
             <input
               type="password"
@@ -35,16 +41,38 @@ export default function Home() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-          </div>
+          </div> */}
 
           <button className="login-button"
-            onClick={() => {
-              loginUser({ username });
-              window.dispatchEvent(new Event("storage")); // <- triggers NavBar to update
-              navigate("/home");
+            onClick={async () => {
+              try {
+                const result = await signInWithPopup(auth, provider);
+                const email = result.user.email;
+                const uid = result.user.uid;
+
+                if (email.endsWith("@ucla.edu") || email.endsWith("@g.ucla.edu")) {
+                  const userRef = doc(db, "users", uid);
+                  const userSnap = await getDoc(userRef);
+
+                  if (userSnap.exists()) {
+                    console.log("🔁 Returning user with profile");
+                    navigate("/home");
+                  } else {
+                    console.log("🎉 New user (no Firestore profile)");
+                    navigate("/create-user");
+                  }
+                } else {
+                  alert("🚫 Only UCLA emails are allowed.");
+                  await auth.signOut();
+                }
+              } catch (error) {
+                console.error("Login failed:", error);
+                alert("Login failed. Try again.");
+                alert(`Login failed: ${error.message}`); // <- add this
+              }
             }}
           >
-            Login
+            Sign in with Google
           </button>
 
           <div className="new">
