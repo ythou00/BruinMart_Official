@@ -50,14 +50,30 @@
 }
 
 .login-button {
-  margin-top: 2rem;
-  height: 35px;
-  width: 150px;
+  display: flex;                    /* allow flex layout */
+  align-items: center;             /* center vertically */
+  justify-content: center;         /* center all contents */
+  gap: 0.5rem;                     /* space between text and icon */
+  margin-top: 0.8rem;
+  height: 50px;
+  min-width: 240px;                
   background-color: #ffb81c;
   color: black;
   font-size: 1.2rem;
   border-radius: 5px;
   cursor: pointer;
+  white-space: nowrap;
+}
+
+.google-icon {
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;      
+  height: 28px;
 }
 
 .new {

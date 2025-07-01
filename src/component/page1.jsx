@@ -6,6 +6,7 @@ import { signInWithPopup } from "firebase/auth";
 import { auth, provider, db } from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
 import { loginUser } from '../utils/auth';
+import { FcGoogle } from "react-icons/fc";
 
 import { useState } from 'react';
 import './page1.css';
@@ -73,10 +74,12 @@ export default function Home() {
             }}
           >
             Sign in with Google
-          </button>
+            <span className="google-icon"><FcGoogle /></span>
+          </button> 
 
           <div className="new">
-            New to BruinMarket? <Link to="/create-user">Create an account</Link>
+            {/* New to BruinMarket? <Link to="/create-user">Create an account</Link> */}
+            New to BruinMart? Please sign-in using your UCLA Gmail to get started
           </div>
         </div>
       </div>
