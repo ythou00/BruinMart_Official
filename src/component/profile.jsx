@@ -84,17 +84,23 @@ function Profile() {
                     imgSrc={studyDeskImage}
                     imgAlt="Desk"
                     title="Study Desk"
-                    detail="Used - Great condition"
+                    detail={[
+                      "Price: $34",
+                      "Type: Furniture"
+                    ]}
                     buttonText="Learn More"
-                    link="/sell-guide"
+                    link="/marketplace"
                 />
                 <ItemCard
                     imgSrc={deskshelfImage}
                     imgAlt="Shelf"
                     title="Desk Shelf"
-                    detail="Like new, from Target"
+                    detail={[
+                      "Price: $24",
+                      "Type: Furniture"
+                    ]}
                     buttonText="Learn More"
-                    link="/sell-guide"
+                    link="/marketplace"
                 />
                 </div>
             </div>

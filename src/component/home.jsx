@@ -34,12 +34,11 @@ export default function Home() {
             title="Desk Clock"
             // detail="good for daily use"
             detail={[
-              "Affordable desk clock",
-              "Easy to set up",
-              "Perfect for dorms"
+              "Price: $8",
+              "Type: Furniture"
             ]}
             buttonText="Learn More"
-            link="/sell-guide"
+            link="/marketplace"
           />
 
           <ItemCard 
@@ -48,12 +47,11 @@ export default function Home() {
             title="Desk Shelf"
             // detail="good for daily use"
             detail={[
-              "Affordable desk clock",
-              "Easy to set up",
-              "Perfect for dorms"
+              "Price: $24",
+              "Type: Furniture"
             ]}
             buttonText="Learn More"
-            link="/sell-guide"
+            link="/marketplace"
           />
 
           <ItemCard 
@@ -62,12 +60,11 @@ export default function Home() {
             title="Study Desk"
             // detail="good for daily use"
             detail={[
-              "Affordable desk clock",
-              "Easy to set up",
-              "Perfect for dorms"
+              "Price: $34",
+              "Type: Furniture"
             ]}
             buttonText="Learn More"
-            link="/sell-guide"
+            link="/marketplace"
           />
 
           <ItemCard
