@@ -98,7 +98,7 @@ export default function SearchPage() {
             <p><strong>Price:</strong> {item.price}</p>
             <p><strong>Type:</strong> {item.type}</p>
             <button onClick={() => setExpandedIndex(index)} className="primary-button">
-              Contact Seller
+              Learn More
             </button>
           </div>
         ))}

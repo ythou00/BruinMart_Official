@@ -29,22 +29,41 @@
 
 .logout-btn {
   margin-top: 1rem;
-  background-color: #f44336;
-  color: white;
+  background-color: #ffb81c;
+  color: black;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.logout-btn:hover {
+  background-color: #003b5c;        /* Red on hover */
+  color: white;
 }
 
 .delete-btn {
-  background-color: #c62828;
+  background-color: #003b5c;
   color: white;
   padding: 0.5em 1em;
   margin-top: 0.5em;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.delete-btn:hover {
+  background-color: #c62828;        /* Red on hover */
+}
+
+.profile-btn-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* optional: center horizontally */
+  gap: 0.8rem;           /* vertical space between buttons */
+  margin-top: 0.5rem;  /* space above the whole group */
 }
 
 .profile-right-section {

@@ -59,18 +59,20 @@ function Profile() {
                 <p><strong>Class of:</strong> {user.classYear}</p>
                 <p><strong>Gender:</strong> {user.gender}</p>
 
-                <button className="logout-btn" 
-                onClick={() => {
-                logoutUser();
-                window.dispatchEvent(new Event("storage")); // manually trigger update
-                navigate("/login");
-                }}>
-                Logout
-                </button>
+                <div className="profile-btn-group">
+                  <button className="logout-btn" 
+                  onClick={() => {
+                  logoutUser();
+                  window.dispatchEvent(new Event("storage")); // manually trigger update
+                  navigate("/login");
+                  }}>
+                    Logout
+                  </button>
 
-                <button className="delete-btn" onClick={handleDeleteAccount}>
-                  Delete My Account
-                </button>
+                  <button className="delete-btn" onClick={handleDeleteAccount}>
+                    Delete Account
+                  </button>
+                </div>
             </div>
 
             {/* RIGHT: Username + Posts */}
