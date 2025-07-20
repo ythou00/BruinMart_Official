@@ -1,6 +1,13 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+
+// Firebase
+import { signInWithPopup } from "firebase/auth";
+import { auth, provider, db } from "../firebase";
+import { doc, getDoc } from "firebase/firestore";
 import { loginUser } from '../utils/auth';
+import { FcGoogle } from "react-icons/fc";
+
 import { useState } from 'react';
 import './page1.css';
 
@@ -17,7 +24,7 @@ export default function Home() {
           <h1 className="welcome">Welcome!</h1>
           <h3 className="welcome-subtext">"Helping Students Make Moves"</h3>
 
-          <div className="enter-input-flex">
+          {/* <div className="enter-input-flex">
             <label htmlFor="Username" className="label">Username</label>
             <input
               type="text"
@@ -25,9 +32,9 @@ export default function Home() {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
-          </div>
+          </div> */}
 
-          <div className="enter-input-flex">
+          {/* <div className="enter-input-flex">
             <label htmlFor="Password" className="label">Password</label>
             <input
               type="password"
@@ -35,20 +42,44 @@ export default function Home() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-          </div>
+          </div> */}
 
           <button className="login-button"
-            onClick={() => {
-              loginUser({ username });
-              window.dispatchEvent(new Event("storage")); // <- triggers NavBar to update
-              navigate("/home");
+            onClick={async () => {
+              try {
+                const result = await signInWithPopup(auth, provider);
+                const email = result.user.email;
+                const uid = result.user.uid;
+
+                if (email.endsWith("@ucla.edu") || email.endsWith("@g.ucla.edu")) {
+                  const userRef = doc(db, "users", uid);
+                  const userSnap = await getDoc(userRef);
+
+                  if (userSnap.exists()) {
+                    const userData = userSnap.data();
+                    loginUser(userData);
+                    window.dispatchEvent(new Event("storage"));
+                    navigate("/home");
+                  } else {
+                    navigate("/create-user");
+                  }
+                } else {
+                  alert("Only UCLA accounts are allowed.");
+                  await auth.signOut();
+                }
+              } catch (err) {
+                console.error("Login failed:", err);
+                alert("Login failed: " + err.message);
+              }
             }}
           >
-            Login
-          </button>
+            Sign in with Google
+            <span className="google-icon"><FcGoogle /></span>
+          </button> 
 
           <div className="new">
-            New to BruinMarket? <Link to="/create-user">Create an account</Link>
+            {/* New to BruinMarket? <Link to="/create-user">Create an account</Link> */}
+            New to BruinMart? Please sign-in using your UCLA Gmail to get started
           </div>
         </div>
       </div>

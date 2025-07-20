@@ -1,6 +1,9 @@
 import React from 'react';
-import { getUser, logoutUser } from '../utils/auth';
-import { useNavigate } from 'react-router-dom';
+import { getAuth, deleteUser } from "firebase/auth";
+import { doc, deleteDoc } from "firebase/firestore";
+import { db } from "../firebase";
+import { logoutUser, getUser } from "../utils/auth";
+import { useNavigate } from "react-router-dom";
 import ItemCard from "./itemCard"; // assuming this is shared
 import './profile.css';
 import Footer from './footer';
@@ -12,6 +15,34 @@ import deskshelfImage from '../assets/deskshelf.jpg';
 function Profile() {
   const user = getUser();
   const navigate = useNavigate();
+
+  const handleDeleteAccount = async () => {
+    const confirmDelete = window.confirm("Are you sure you want to delete your account? This action cannot be undone.");
+    if (!confirmDelete) return;
+
+    try {
+      const auth = getAuth();
+      const currentUser = auth.currentUser;
+      const userData = getUser();
+
+      if (currentUser && userData) {
+        // 1. Delete user profile from Firestore
+        await deleteDoc(doc(db, "users", currentUser.uid));
+
+        // 2. Delete the Firebase Auth user
+        await deleteUser(currentUser);
+
+        // 3. Log out from app
+        logoutUser();
+        window.dispatchEvent(new Event("storage"));
+        alert("Account deleted successfully.");
+        navigate("/");
+      }
+    } catch (error) {
+      console.error("Delete failed:", error);
+      alert("Failed to delete account. You may need to re-login before deleting.");
+    }
+  };
 
   if (!user) {
     return <div>You are not logged in. Please <button onClick={() => navigate("/login")}>login</button>.</div>;
@@ -28,14 +59,20 @@ function Profile() {
                 <p><strong>Class of:</strong> {user.classYear}</p>
                 <p><strong>Gender:</strong> {user.gender}</p>
 
-                <button className="logout-btn" 
-                onClick={() => {
-                logoutUser();
-                window.dispatchEvent(new Event("storage")); // manually trigger update
-                navigate("/login");
-                }}>
-                Logout
-                </button>
+                <div className="profile-btn-group">
+                  <button className="logout-btn" 
+                  onClick={() => {
+                  logoutUser();
+                  window.dispatchEvent(new Event("storage")); // manually trigger update
+                  navigate("/login");
+                  }}>
+                    Logout
+                  </button>
+
+                  <button className="delete-btn" onClick={handleDeleteAccount}>
+                    Delete Account
+                  </button>
+                </div>
             </div>
 
             {/* RIGHT: Username + Posts */}
@@ -47,17 +84,23 @@ function Profile() {
                     imgSrc={studyDeskImage}
                     imgAlt="Desk"
                     title="Study Desk"
-                    detail="Used - Great condition"
+                    detail={[
+                      "Price: $34",
+                      "Type: Furniture"
+                    ]}
                     buttonText="Learn More"
-                    link="/sell-guide"
+                    link="/marketplace"
                 />
                 <ItemCard
                     imgSrc={deskshelfImage}
                     imgAlt="Shelf"
                     title="Desk Shelf"
-                    detail="Like new, from Target"
+                    detail={[
+                      "Price: $24",
+                      "Type: Furniture"
+                    ]}
                     buttonText="Learn More"
-                    link="/sell-guide"
+                    link="/marketplace"
                 />
                 </div>
             </div>

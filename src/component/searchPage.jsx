@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './searchPage.css';
 import Footer from './footer';
+import ItemCard from './itemCard';
 
 export default function SearchPage() {
   const [selectedType, setSelectedType] = useState('');
@@ -17,7 +18,7 @@ export default function SearchPage() {
     { label: "Projector", price: "$40", type: "Electronic", image: "https://media.wired.com/photos/629feede5da297afa9ff5e6f/master/pass/Home-Theater-Gear-GettyImages-95781853.jpg", description: "HD home projector.", seller: "Grace" },
     { label: "Kitchen Plates", price: "$45", type: "Kitchen Supplies", image: "https://www.lecreuset.com/dw/image/v2/BDRT_PRD/on/demandware.static/-/Sites-le-creuset-master/default/dwa89bc051/images/cat_dinnerware/dinnerware/saesalt_dinnerware_g1.jpg?sw=650&sh=650&sm=fit", description: "Set of dinner plates.", seller: "Hank" },
     { label: "Art Supplies", price: "$50", type: "Art", image: "https://www.artskills.com/media/catalog/product/cache/76027d223f1bcb4d2ba6682c7f99227f/p/7/p7_pa7520_artessentialsstudio_inuse2.jpg", description: "Complete art kit.", seller: "Ivy" },
-    { label: "Vaccum Cleaner", price: "$40", type: "Electronic", image: "https://images.contentstack.io/v3/assets/blt34d3d525a62e8995/blt7d6d7e62bf569493/66e988200742c56541f88f86/upright_vac_carousel_600x720.jpg?branch=master&format=webp&width=360", description: "Upright vacuum cleaner.", seller: "Jack" },
+    { label: "Vaccum", price: "$40", type: "Electronic", image: "https://images.contentstack.io/v3/assets/blt34d3d525a62e8995/blt7d6d7e62bf569493/66e988200742c56541f88f86/upright_vac_carousel_600x720.jpg?branch=master&format=webp&width=360", description: "Upright vacuum cleaner.", seller: "Jack" },
     { label: "Printer", price: "$50", type: "Electronic", image: "https://cdn.thewirecutter.com/wp-content/media/2024/08/laserprinters-2048px-02603-3x2-1.jpg?auto=webp&quality=75&crop=3:2&width=1024", description: "Laser printer for home office.", seller: "Karen" },
     { label: "Knives", price: "$30", type: "Kitchen Supplies", image: "https://upload.wikimedia.org/wikipedia/commons/8/8f/Cucina_012.jpg", description: "Kitchen knife set.", seller: "Leo" },
     { label: "Whisk", price: "$10", type: "Kitchen Supplies", image: "https://upload.wikimedia.org/wikipedia/commons/8/85/Schneebesen1.JPG", description: "Metal whisk for baking.", seller: "Mona" },
@@ -92,15 +93,19 @@ export default function SearchPage() {
 
       <div className="card-shape">
         {filteredItems.map((item, index) => (
-          <div key={index} className="item-card-container">
-            <img src={item.image} alt={item.label} />
-            <h2>{item.label}</h2>
-            <p><strong>Price:</strong> {item.price}</p>
-            <p><strong>Type:</strong> {item.type}</p>
-            <button onClick={() => setExpandedIndex(index)} className="primary-button">
-              Contact Seller
-            </button>
-          </div>
+          <ItemCard
+            key={index}
+            imgSrc={item.image}
+            imgAlt={item.label}
+            title={item.label}
+            detail={[
+              `Price: ${item.price}`,
+              `Type: ${item.type}`
+            ]}
+            buttonText="Learn More"
+            onClick={() => setExpandedIndex(index)}
+          />
+
         ))}
       </div>
 
