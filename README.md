@@ -12,11 +12,23 @@ That’s why we created BruinMart: a platform exclusively for UCLA students and 
 
 1. Go to [bruinmart.vercel.app](https://bruinmart.vercel.app)
 2. Click “Login/Sign Up” to sign in with your UCLA or g.ucla.edu email.
+![Login Screenshot](./src/assets/login_step1.jpg)
+![Login Screenshot](./src/assets/login_step2.jpg)
 3. New users will be prompted to complete their profile.
-4. Once verified, you can browse listings, post your own, and contact sellers.
+![Login Screenshot](./src/assets/login_step4.jpg)
+4. Once verified, you can browse listings and contact sellers.
+![Login Screenshot](./src/assets/login_step6.jpg)
+![Login Screenshot](./src/assets/login_step7.jpg)
+
+***
+**Steps to Log Out / Delete Account**
+1. Navigate to the Profile page
+2. Click on the Logout Button or Delete Account
+![Login Screenshot](./src/assets/logout_step1.jpg)
 
 ## Features
 - UCLA-only sign-in via Google Authentication
+![Login Screenshot](./src/assets/login_step3.jpg)
 - Browse and listings for furniture, books, and more
 - Responsive UI for desktop
 - Listing detail pop-up with price/type
