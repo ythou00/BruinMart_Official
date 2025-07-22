@@ -1,6 +1,6 @@
 # Welcome to BruinMart 🐻
 
-Explore BruinMart 👉 [here](https://bruinmart.vercel.app)
+**Explore BruinMart 👉 [here](https://bruinmart.vercel.app)**
 
 BruinMart was built by UCLA students, for UCLA students to simplify buying and selling within our community while keeping it secure and reliable.
 
